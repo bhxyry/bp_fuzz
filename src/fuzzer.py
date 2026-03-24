@@ -20,7 +20,7 @@ def fuzz_loop():
 
             uart.wait_for_output()
 
-            data = "feebdaed"
+            data = "deadbeef\n"
             uart.send_input(data)
 
             uart.wait_for_output()
@@ -28,6 +28,7 @@ def fuzz_loop():
     except KeyboardInterrupt:
         qemu.stop()
         gdb.disconnect()
+        uart.disconnect()
 
 
 if __name__ == "__main__":

@@ -12,11 +12,21 @@ class UART:
         print("UART connected!")
 
     def wait_for_output(self):
-        data = self.sock.recv(1024)
-        print("receive:", data)
+        buffer = b""
+        while not buffer.endswith(b"\n"):
+            buffer += self.sock.recv(1)
+        print("receive:", buffer)
 
     def send_input(self, data):
         if isinstance(data, str):
-            data = bytes.fromhex(data)
+            data = data.encode()
 
-        self.sock.send(data)
+        self.sock.sendall(data)
+        print("data send!")
+
+    def disconnect(self):
+        if self.sock is None:
+            return
+
+        self.sock.close()
+        print("serial disconnect!")
