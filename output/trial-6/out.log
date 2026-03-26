@@ -1,0 +1,52 @@
+2026-03-26 17:24:04,056 [INFO project.py:162 __init__()] Loading binary ./example/fuzz-deadbeef.elf
+2026-03-26 17:24:04,065 [INFO loader.py:907 _internal_load()] Linking /Users/bhxyry/Desktop/毕业设计/bp_fuzz/example/fuzz-deadbeef.elf
+2026-03-26 17:24:04,065 [INFO loader.py:1058 _map_object()] Mapping /Users/bhxyry/Desktop/毕业设计/bp_fuzz/example/fuzz-deadbeef.elf at 0x8000000
+2026-03-26 17:24:04,065 [INFO loader.py:907 _internal_load()] Linking cle##externs
+2026-03-26 17:24:04,065 [INFO loader.py:1058 _map_object()] Mapping cle##externs at 0x20100000
+2026-03-26 17:24:04,065 [INFO loader.py:907 _internal_load()] Linking cle##tls
+2026-03-26 17:24:04,065 [INFO loader.py:1058 _map_object()] Mapping cle##tls at 0x20200000
+2026-03-26 17:24:04,065 [INFO loader.py:1058 _map_object()] Mapping cle##kernel at 0x20300000
+2026-03-26 17:24:04,069 [INFO cfg_base.py:180 __init__()] Loaded 5 indirect jump resolvers (3 timeless, 2 generic).
+2026-03-26 17:24:04,069 [INFO __init__.py:151 make_extern()] Created extern symbol for UnresolvableJumpTarget
+2026-03-26 17:24:04,069 [INFO __init__.py:151 make_extern()] Created extern symbol for UnresolvableCallTarget
+2026-03-26 17:24:04,071 [INFO cfg_fast.py:3557 _preprocess_exception_handlings()] Loaded 0 exception handlings from 0 binaries.
+2026-03-26 17:24:04,071 [INFO cfg_fast.py:2232 _func_addrs_from_prologues()] Found 23 functions with prologue scanning.
+2026-03-26 17:24:04,127 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000b07 in function 0x8000989.
+2026-03-26 17:24:04,134 [INFO jumptable.py:1136 _resolve()] Jump table at 0x8000b07 has 19 targets: 0x80009bb, 0x8000a53, 0x8000a5d, 0x8000a6f, 0x80009d3, 0x80009d3, 0x80009d3, 0x80009d3, 0x80009d3, 0x80009d3, 0x80009d3, 0x80009d3, 0x80009d3, 0x80009d3, 0x80009d3, 0x80009d3, 0x80009d3, 0x8000a57, 0x8000a63
+2026-03-26 17:24:04,140 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000265 in function 0x8000259.
+2026-03-26 17:24:04,146 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000265 in function 0x8000259.
+2026-03-26 17:24:04,152 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000265 in function 0x8000259.
+2026-03-26 17:24:04,158 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000265 in function 0x8000259.
+2026-03-26 17:24:04,161 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000265 in function 0x8000259.
+2026-03-26 17:24:04,164 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000281 in function 0x8000259.
+2026-03-26 17:24:04,172 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000281 in function 0x8000259.
+2026-03-26 17:24:04,179 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000281 in function 0x8000259.
+2026-03-26 17:24:04,188 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000281 in function 0x8000259.
+2026-03-26 17:24:04,191 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000281 in function 0x8000259.
+2026-03-26 17:24:04,196 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000283 in function 0x8000259.
+2026-03-26 17:24:04,202 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000283 in function 0x8000259.
+2026-03-26 17:24:04,207 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000283 in function 0x8000259.
+2026-03-26 17:24:04,215 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000283 in function 0x8000259.
+2026-03-26 17:24:04,219 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000283 in function 0x8000259.
+2026-03-26 17:24:04,223 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000267 in function 0x8000259.
+2026-03-26 17:24:04,230 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000267 in function 0x8000259.
+2026-03-26 17:24:04,235 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000267 in function 0x8000259.
+2026-03-26 17:24:04,241 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000267 in function 0x8000259.
+2026-03-26 17:24:04,244 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000267 in function 0x8000259.
+2026-03-26 17:24:04,261 [INFO binaryanalyzer.py:37 generate_cfg()] binary analyzer complete!
+2026-03-26 17:24:04,264 [INFO qemu.py:33 start()] qemu started
+2026-03-26 17:24:05,689 [INFO GDB.py:15 connect()] gdb connected!
+2026-03-26 17:24:05,904 [INFO uart.py:13 connect()] UART connected!
+2026-03-26 17:24:05,904 [INFO GDB.py:31 set_breakpoint()] set breakpoint at 0x8000388
+2026-03-26 17:24:06,184 [INFO GDB.py:31 set_breakpoint()] set breakpoint at 0x80003b6
+2026-03-26 17:24:06,388 [INFO GDB.py:31 set_breakpoint()] set breakpoint at 0x80003b4
+2026-03-26 17:24:06,593 [INFO GDB.py:31 set_breakpoint()] set breakpoint at 0x8000382
+2026-03-26 17:24:06,797 [INFO fuzzer.py:83 set_breakpoints()] Redistribute all 4 breakpoints
+2026-03-26 17:24:06,798 [INFO GDB.py:20 continue_run()] continue exec!
+2026-03-26 17:24:07,004 [INFO uart.py:19 wait_for_output()] receive:b'Input:\n'
+2026-03-26 17:24:07,004 [INFO uart.py:26 send_input()] data send!
+2026-03-26 17:24:07,210 [INFO fuzzer.py:66 start_fuzz()] Breakpoint hit at 0x08000382
+2026-03-26 17:24:07,211 [INFO GDB.py:20 continue_run()] continue exec!
+2026-03-26 17:24:07,416 [INFO qemu.py:41 stop()] qemu stopped
+2026-03-26 17:24:07,426 [INFO GDB.py:24 disconnect()] GDB Exit
+2026-03-26 17:24:07,627 [INFO uart.py:33 disconnect()] serial disconnect!

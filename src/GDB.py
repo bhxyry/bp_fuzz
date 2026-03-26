@@ -16,12 +16,9 @@ class GDB:
 
         self.gdb.write("-gdb-set target-async on")
 
-    def set_breakpoint(self):
-        pass
-
     def continue_run(self):
         log.info("continue exec!")
-        self.gdb.write("-exec-continue")
+        return self.gdb.write("-exec-continue", read_response=True)
 
     def disconnect(self):
         log.info("GDB Exit")
@@ -30,9 +27,10 @@ class GDB:
         except:
             pass
 
-    def wait_for_stop(self, timeout):
-        try:
-            msg = self.gdb.get_gdb_response(timeout_sec=timeout)
-        except queue.Empty:
-            msg = ("timed out", None)
-        return msg
+    def set_breakpoint(self, addr: str):
+        log.info(f"set breakpoint at {addr}")
+        self.gdb.write(f"-break-insert *{addr}")
+
+    def interrupt(self):
+        log.info("execute interrupt")
+        self.gdb.write("-exec-interrupt")

@@ -3,121 +3,81 @@ import argparse
 import os
 import pathlib
 import logging as log
+import pygdbmi
 import time
+import random
 from qemu import QEMU
 from GDB import GDB
 from uart import UART
 from binaryanalyzer import BinaryAnalyzer
 
 
-def uniquify(path):
-    counter = 0
+class Fuzzer:
 
-    new_path = path
+    def __init__(self, config: configparser):
+        self.binaryanalyzer = BinaryAnalyzer(
+            config["SUT"]["file_path"], config["SUT"]["entry_function"]
+        )
+        self.qemu = QEMU(config["SUT"]["file_path"], config["SUT"]["machine"])
+        self.gdb = GDB()
+        self.uart = UART()
+        self.max_breakpoints = int(config["SUT"]["max_breakpoints"])
 
-    while True:
-        new_path = path + "-" + str(counter)
-        counter += 1
-        if not os.path.exists(new_path):
-            return new_path
+        self.before_fuzz(config)
 
-    return path
+        self.start_fuzz(config)
 
+        # self.after_fuzz(config)
 
-def create_output_directory(output_directory_base: str) -> str:
-    output_directory = uniquify(output_directory_base + "/trial")
-    pathlib.Path(output_directory).mkdir(parents=True, exist_ok=True)
-    return output_directory
+    def before_fuzz(self, config: configparser):
+        # before fuzzing
+        self.binaryanalyzer.generate_cfg(config["output"]["output_directory"])
 
+    def start_fuzz(self, config: configparser):
+        # start fuzzing
+        self.qemu.start()
 
-def setup_log(output_directory: str, loglevel: str):
-    logger = log.getLogger()
-    formatter = log.Formatter(
-        "%(asctime)s [%(levelname)s %(filename)s:%(lineno)s "
-        "%(funcName)s()] %(message)s"
-    )
+        self.gdb.connect()
 
-    file_logger = log.FileHandler(os.path.join(output_directory, "out.log"))
-    file_logger.setLevel(loglevel)
-    file_logger.setFormatter(formatter)
-    logger.addHandler(file_logger)
+        self.uart.connect()
 
-    stdout_logger = log.StreamHandler()
-    stdout_logger.setLevel(loglevel)
-    stdout_logger.setFormatter(formatter)
-    logger.addHandler(stdout_logger)
+        self.set_breakpoints()
 
-    log.root.setLevel(loglevel)
+        self.gdb.continue_run()
 
+        stop_time = config["Fuzzer"].getint("total_time") + int(time.time())
+        try:
+            while int(time.time()) < stop_time:
 
-def before_fuzzing(config: configparser):
-    # before fuzzing
-    binaryanalyzer = BinaryAnalyzer(
-        config["SUT"]["file_path"], config["SUT"]["entry_function"]
-    )
-    binaryanalyzer.generate_cfg()
+                output = self.uart.wait_for_output()
+                while output != b"Input:\n":
+                    output = self.uart.wait_for_output()
+                # 数据发送
+                data = "deadbeef\n"
+                self.uart.send_input(data)
+                # 断点命中
+                responses = self.gdb.gdb.get_gdb_response()
+                for r in responses:
+                    # print(r)
+                    if (
+                        r["message"] == "stopped"
+                        and r["payload"].get("reason") == "breakpoint-hit"
+                    ):
+                        hit_addr = r["payload"]["frame"]["addr"]
+                        log.info(f"Breakpoint hit at {hit_addr}")
+                        responses.extend(self.gdb.continue_run())
 
+        finally:
+            self.qemu.stop()
+            self.gdb.disconnect()
+            self.uart.disconnect()
 
-def start_fuzzing(config: configparser):
-    # start fuzzing
-    qemu = QEMU(config["SUT"]["file_path"], config["SUT"]["machine"])
-    qemu.start()
-    gdb = GDB()
-    gdb.connect()
+    def set_breakpoints(self):
+        if self.max_breakpoints <= 0:
+            return
 
-    uart = UART()
-    uart.connect()
+        addrs = self.binaryanalyzer.random_breakpoint(self.max_breakpoints)
+        for addr in addrs:
+            self.gdb.set_breakpoint(f"0x{addr:x}")
 
-    single_run_timeout = config["Fuzzer"].getint("single_run_timeout")
-    stop_time = config["Fuzzer"].getint("stop_time") + int(time.time())
-
-    stop_reason, stop_info = None, None
-    while int(time.time()) < stop_time:
-        if stop_reason is None:
-            gdb.continue_run()
-
-        stop_reason, stop_info = gdb.wait_for_stop(single_run_timeout)
-
-    try:
-        while True:
-
-            uart.wait_for_output()
-
-            data = "deadbeef\n"
-            uart.send_input(data)
-
-            uart.wait_for_output()
-
-    except KeyboardInterrupt:
-        qemu.stop()
-        gdb.disconnect()
-        uart.disconnect()
-
-
-def fuzz_loop():
-    paser = argparse.ArgumentParser()
-    paser.add_argument(
-        "--config", required=True, type=str, help="Path to a config file."
-    )
-    args = paser.parse_args()
-
-    if not os.path.isfile(args.config):
-        raise Exception(f"Config file at {args.config} does not exist")
-
-    config = configparser.ConfigParser()
-    config.read(args.config)
-
-    output_directory = create_output_directory(config["output"]["output_directory"])
-    config["output"]["output_directory"] = output_directory
-
-    setup_log(config["output"]["output_directory"], config["log"]["log_level"])
-
-    before_fuzzing(config)
-
-    start_fuzzing(config)
-
-    # after fuzzing
-
-
-if __name__ == "__main__":
-    fuzz_loop()
+        log.info(f"Redistribute all {self.max_breakpoints} breakpoints")

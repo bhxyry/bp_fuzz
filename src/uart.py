@@ -17,6 +17,7 @@ class UART:
         while not buffer.endswith(b"\n"):
             buffer += self.sock.recv(1)
         log.info("receive:%s", buffer)
+        return buffer
 
     def send_input(self, data):
         if isinstance(data, str):
