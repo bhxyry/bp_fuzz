@@ -1,21 +1,23 @@
 import subprocess
 import time
+import logging as log
 
 
 class QEMU:
-    def __init__(self, elf):
+    def __init__(self, elf, machine):
         self.elf = elf
         self.process = None
+        self.machine = machine
 
     def start(self):
         if self.process is not None:
-            print("qemu already running")
+            log.info("qemu already running")
 
         self.process = subprocess.Popen(
             [
                 "qemu-system-arm",
                 "-M",
-                "stm32vldiscovery",
+                self.machine,
                 "-kernel",
                 self.elf,
                 "-gdb",
@@ -28,7 +30,7 @@ class QEMU:
             stdout=subprocess.DEVNULL,
             stderr=subprocess.DEVNULL,
         )
-        print("qemu started")
+        log.info("qemu started")
 
         time.sleep(1)
 
@@ -36,7 +38,7 @@ class QEMU:
         if self.process is None:
             return
 
-        print("qemu stopped")
+        log.info("qemu stopped")
         self.process.terminate()
 
         try:
