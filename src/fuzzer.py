@@ -9,6 +9,7 @@ import random
 from qemu import QEMU
 from GDB import GDB
 from uart import UART
+import queue
 from binaryanalyzer import BinaryAnalyzer
 
 
@@ -18,10 +19,12 @@ class Fuzzer:
         self.binaryanalyzer = BinaryAnalyzer(
             config["SUT"]["file_path"], config["SUT"]["entry_function"]
         )
+        self.stop_queue = queue.Queue()
         self.qemu = QEMU(config["SUT"]["file_path"], config["SUT"]["machine"])
-        self.gdb = GDB()
-        self.uart = UART()
+        self.gdb = GDB(self.stop_queue)
+        self.uart = UART(self.stop_queue)
         self.max_breakpoints = int(config["SUT"]["max_breakpoints"])
+        self.until_rotate_breakpoints = int(config["SUT"]["until_rotate_breakpoints"])
 
         self.before_fuzz(config)
 
@@ -41,32 +44,34 @@ class Fuzzer:
 
         self.uart.connect()
 
-        self.set_breakpoints()
-
+        time.sleep(1)
         self.gdb.continue_run()
+        # self.gdb.interrupt()
+        # time.sleep(1)
 
         stop_time = config["Fuzzer"].getint("total_time") + int(time.time())
+        inputs_until_breakpoints_rotating = 0
         try:
             while int(time.time()) < stop_time:
+                response = self.gdb.wait_for_stop()
 
-                output = self.uart.wait_for_output()
-                while output != b"Input:\n":
-                    output = self.uart.wait_for_output()
-                # 数据发送
-                data = "deadbeef\n"
-                self.uart.send_input(data)
-                # 断点命中
-                responses = self.gdb.gdb.get_gdb_response()
-                for r in responses:
-                    # print(r)
-                    if (
-                        r["message"] == "stopped"
-                        and r["payload"].get("reason") == "breakpoint-hit"
-                    ):
-                        hit_addr = r["payload"]["frame"]["addr"]
-                        log.info(f"Breakpoint hit at {hit_addr}")
-                        responses.extend(self.gdb.continue_run())
+                if response["reason"] == "input request":
 
+                    if inputs_until_breakpoints_rotating == 0:
+                        self.gdb.interrupt()
+                        self.set_breakpoints()
+                        self.gdb.continue_run()
+
+                    inputs_until_breakpoints_rotating = (
+                        inputs_until_breakpoints_rotating + 1
+                    ) % self.max_breakpoints
+
+                    data = "deadbeef\n"
+                    self.uart.send_input(data)
+                elif response["reason"] == "breakpoint-hit":
+                    hit_addr = response["payload"]["frame"]["addr"]
+                    log.info(f"Breakpoint hit at {hit_addr}")
+                    self.gdb.continue_run()
         finally:
             self.qemu.stop()
             self.gdb.disconnect()

@@ -1,51 +1,332 @@
-2026-03-26 16:51:30,334 [INFO project.py:162 __init__()] Loading binary ./example/fuzz-deadbeef.elf
-2026-03-26 16:51:30,342 [INFO loader.py:907 _internal_load()] Linking /Users/bhxyry/Desktop/毕业设计/bp_fuzz/example/fuzz-deadbeef.elf
-2026-03-26 16:51:30,342 [INFO loader.py:1058 _map_object()] Mapping /Users/bhxyry/Desktop/毕业设计/bp_fuzz/example/fuzz-deadbeef.elf at 0x8000000
-2026-03-26 16:51:30,342 [INFO loader.py:907 _internal_load()] Linking cle##externs
-2026-03-26 16:51:30,342 [INFO loader.py:1058 _map_object()] Mapping cle##externs at 0x20100000
-2026-03-26 16:51:30,343 [INFO loader.py:907 _internal_load()] Linking cle##tls
-2026-03-26 16:51:30,343 [INFO loader.py:1058 _map_object()] Mapping cle##tls at 0x20200000
-2026-03-26 16:51:30,343 [INFO loader.py:1058 _map_object()] Mapping cle##kernel at 0x20300000
-2026-03-26 16:51:30,346 [INFO cfg_base.py:180 __init__()] Loaded 5 indirect jump resolvers (3 timeless, 2 generic).
-2026-03-26 16:51:30,347 [INFO __init__.py:151 make_extern()] Created extern symbol for UnresolvableJumpTarget
-2026-03-26 16:51:30,347 [INFO __init__.py:151 make_extern()] Created extern symbol for UnresolvableCallTarget
-2026-03-26 16:51:30,348 [INFO cfg_fast.py:3557 _preprocess_exception_handlings()] Loaded 0 exception handlings from 0 binaries.
-2026-03-26 16:51:30,348 [INFO cfg_fast.py:2232 _func_addrs_from_prologues()] Found 23 functions with prologue scanning.
-2026-03-26 16:51:30,404 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000b07 in function 0x8000989.
-2026-03-26 16:51:30,412 [INFO jumptable.py:1136 _resolve()] Jump table at 0x8000b07 has 19 targets: 0x80009bb, 0x8000a53, 0x8000a5d, 0x8000a6f, 0x80009d3, 0x80009d3, 0x80009d3, 0x80009d3, 0x80009d3, 0x80009d3, 0x80009d3, 0x80009d3, 0x80009d3, 0x80009d3, 0x80009d3, 0x80009d3, 0x80009d3, 0x8000a57, 0x8000a63
-2026-03-26 16:51:30,418 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000265 in function 0x8000259.
-2026-03-26 16:51:30,424 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000265 in function 0x8000259.
-2026-03-26 16:51:30,429 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000265 in function 0x8000259.
-2026-03-26 16:51:30,435 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000265 in function 0x8000259.
-2026-03-26 16:51:30,437 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000265 in function 0x8000259.
-2026-03-26 16:51:30,441 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000281 in function 0x8000259.
-2026-03-26 16:51:30,448 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000281 in function 0x8000259.
-2026-03-26 16:51:30,455 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000281 in function 0x8000259.
-2026-03-26 16:51:30,463 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000281 in function 0x8000259.
-2026-03-26 16:51:30,467 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000281 in function 0x8000259.
-2026-03-26 16:51:30,471 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000283 in function 0x8000259.
-2026-03-26 16:51:30,477 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000283 in function 0x8000259.
-2026-03-26 16:51:30,482 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000283 in function 0x8000259.
-2026-03-26 16:51:30,490 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000283 in function 0x8000259.
-2026-03-26 16:51:30,494 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000283 in function 0x8000259.
-2026-03-26 16:51:30,497 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000267 in function 0x8000259.
-2026-03-26 16:51:30,504 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000267 in function 0x8000259.
-2026-03-26 16:51:30,509 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000267 in function 0x8000259.
-2026-03-26 16:51:30,515 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000267 in function 0x8000259.
-2026-03-26 16:51:30,518 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000267 in function 0x8000259.
-2026-03-26 16:51:30,534 [INFO binaryanalyzer.py:37 generate_cfg()] binary analyzer complete!
-2026-03-26 16:51:30,537 [INFO qemu.py:33 start()] qemu started
-2026-03-26 16:51:31,959 [INFO GDB.py:15 connect()] gdb connected!
-2026-03-26 16:51:32,172 [INFO uart.py:13 connect()] UART connected!
-2026-03-26 16:51:32,173 [INFO GDB.py:31 set_breakpoint()] set breakpoint at 0x80003b4
-2026-03-26 16:51:32,452 [INFO GDB.py:31 set_breakpoint()] set breakpoint at 0x8000388
-2026-03-26 16:51:32,660 [INFO GDB.py:31 set_breakpoint()] set breakpoint at 0x80003a0
-2026-03-26 16:51:32,867 [INFO GDB.py:31 set_breakpoint()] set breakpoint at 0x8000372
-2026-03-26 16:51:33,072 [INFO fuzzer.py:87 set_breakpoints()] Redistribute all 4 breakpoints
-2026-03-26 16:51:33,073 [INFO GDB.py:20 continue_run()] continue exec!
-2026-03-26 16:51:33,278 [INFO uart.py:19 wait_for_output()] receive:b'Input:\n'
-2026-03-26 16:51:33,279 [INFO uart.py:26 send_input()] data send!
-2026-03-26 16:51:33,485 [INFO GDB.py:20 continue_run()] continue exec!
-2026-03-26 16:52:04,350 [INFO qemu.py:41 stop()] qemu stopped
-2026-03-26 16:52:04,355 [INFO GDB.py:24 disconnect()] GDB Exit
-2026-03-26 16:52:04,556 [INFO uart.py:33 disconnect()] serial disconnect!
+2026-04-01 20:08:32,803 [INFO project.py:162 __init__()] Loading binary ./example/fuzz-deadbeef.elf
+2026-04-01 20:08:32,811 [INFO loader.py:907 _internal_load()] Linking /Users/bhxyry/Desktop/毕业设计/bp_fuzz/example/fuzz-deadbeef.elf
+2026-04-01 20:08:32,811 [INFO loader.py:1058 _map_object()] Mapping /Users/bhxyry/Desktop/毕业设计/bp_fuzz/example/fuzz-deadbeef.elf at 0x8000000
+2026-04-01 20:08:32,811 [INFO loader.py:907 _internal_load()] Linking cle##externs
+2026-04-01 20:08:32,811 [INFO loader.py:1058 _map_object()] Mapping cle##externs at 0x20100000
+2026-04-01 20:08:32,812 [INFO loader.py:907 _internal_load()] Linking cle##tls
+2026-04-01 20:08:32,812 [INFO loader.py:1058 _map_object()] Mapping cle##tls at 0x20200000
+2026-04-01 20:08:32,812 [INFO loader.py:1058 _map_object()] Mapping cle##kernel at 0x20300000
+2026-04-01 20:08:32,816 [INFO cfg_base.py:180 __init__()] Loaded 5 indirect jump resolvers (3 timeless, 2 generic).
+2026-04-01 20:08:32,816 [INFO __init__.py:151 make_extern()] Created extern symbol for UnresolvableJumpTarget
+2026-04-01 20:08:32,816 [INFO __init__.py:151 make_extern()] Created extern symbol for UnresolvableCallTarget
+2026-04-01 20:08:32,817 [INFO cfg_fast.py:3557 _preprocess_exception_handlings()] Loaded 0 exception handlings from 0 binaries.
+2026-04-01 20:08:32,818 [INFO cfg_fast.py:2232 _func_addrs_from_prologues()] Found 23 functions with prologue scanning.
+2026-04-01 20:08:32,872 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000281 in function 0x8000259.
+2026-04-01 20:08:32,880 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000281 in function 0x8000259.
+2026-04-01 20:08:32,888 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000281 in function 0x8000259.
+2026-04-01 20:08:32,895 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000281 in function 0x8000259.
+2026-04-01 20:08:32,899 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000281 in function 0x8000259.
+2026-04-01 20:08:32,903 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000b07 in function 0x8000989.
+2026-04-01 20:08:32,909 [INFO jumptable.py:1136 _resolve()] Jump table at 0x8000b07 has 19 targets: 0x80009bb, 0x8000a53, 0x8000a5d, 0x8000a6f, 0x80009d3, 0x80009d3, 0x80009d3, 0x80009d3, 0x80009d3, 0x80009d3, 0x80009d3, 0x80009d3, 0x80009d3, 0x80009d3, 0x80009d3, 0x80009d3, 0x80009d3, 0x8000a57, 0x8000a63
+2026-04-01 20:08:32,915 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000265 in function 0x8000259.
+2026-04-01 20:08:32,921 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000265 in function 0x8000259.
+2026-04-01 20:08:32,928 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000265 in function 0x8000259.
+2026-04-01 20:08:32,933 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000265 in function 0x8000259.
+2026-04-01 20:08:32,936 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000265 in function 0x8000259.
+2026-04-01 20:08:32,940 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000283 in function 0x8000259.
+2026-04-01 20:08:32,947 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000283 in function 0x8000259.
+2026-04-01 20:08:32,952 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000283 in function 0x8000259.
+2026-04-01 20:08:32,960 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000283 in function 0x8000259.
+2026-04-01 20:08:32,963 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000283 in function 0x8000259.
+2026-04-01 20:08:32,967 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000267 in function 0x8000259.
+2026-04-01 20:08:32,974 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000267 in function 0x8000259.
+2026-04-01 20:08:32,979 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000267 in function 0x8000259.
+2026-04-01 20:08:32,985 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000267 in function 0x8000259.
+2026-04-01 20:08:32,988 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000267 in function 0x8000259.
+2026-04-01 20:08:33,006 [INFO binaryanalyzer.py:37 generate_cfg()] binary analyzer complete!
+2026-04-01 20:08:33,009 [INFO qemu.py:34 start()] qemu started
+2026-04-01 20:08:34,015 [INFO GDB.py:66 connect()] gdb connected!
+2026-04-01 20:08:34,022 [INFO uart.py:18 connect()] UART connected!
+2026-04-01 20:08:35,028 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:35,035 [INFO uart.py:29 wait_for_output()] receive:b'Input:\n'
+2026-04-01 20:08:35,036 [INFO GDB.py:85 interrupt()] gdb interrupt!
+2026-04-01 20:08:35,036 [INFO GDB.py:80 set_breakpoint()] set breakpoint at 0x8000394
+2026-04-01 20:08:35,037 [INFO GDB.py:80 set_breakpoint()] set breakpoint at 0x800037c
+2026-04-01 20:08:35,037 [INFO GDB.py:80 set_breakpoint()] set breakpoint at 0x8000382
+2026-04-01 20:08:35,037 [INFO GDB.py:80 set_breakpoint()] set breakpoint at 0x800036e
+2026-04-01 20:08:35,037 [INFO fuzzer.py:88 set_breakpoints()] Redistribute all 4 breakpoints
+2026-04-01 20:08:35,037 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:35,038 [INFO uart.py:40 send_input()] data send!
+2026-04-01 20:08:35,317 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x0800036e
+2026-04-01 20:08:35,317 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:35,422 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x0800037c
+2026-04-01 20:08:35,422 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:35,525 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000382
+2026-04-01 20:08:35,525 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:35,625 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000394
+2026-04-01 20:08:35,626 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:35,629 [INFO uart.py:29 wait_for_output()] receive:b'OK\n'
+2026-04-01 20:08:35,629 [INFO uart.py:29 wait_for_output()] receive:b'Input:\n'
+2026-04-01 20:08:35,630 [INFO uart.py:40 send_input()] data send!
+2026-04-01 20:08:35,730 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x0800036e
+2026-04-01 20:08:35,731 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:35,836 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x0800037c
+2026-04-01 20:08:35,836 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:35,941 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000382
+2026-04-01 20:08:35,941 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:36,041 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000394
+2026-04-01 20:08:36,042 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:36,044 [INFO uart.py:29 wait_for_output()] receive:b'OK\n'
+2026-04-01 20:08:36,045 [INFO uart.py:29 wait_for_output()] receive:b'Input:\n'
+2026-04-01 20:08:36,045 [INFO uart.py:40 send_input()] data send!
+2026-04-01 20:08:36,147 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x0800036e
+2026-04-01 20:08:36,147 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:36,248 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x0800037c
+2026-04-01 20:08:36,248 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:36,350 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000382
+2026-04-01 20:08:36,351 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:36,455 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000394
+2026-04-01 20:08:36,456 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:36,458 [INFO uart.py:29 wait_for_output()] receive:b'OK\n'
+2026-04-01 20:08:36,459 [INFO uart.py:29 wait_for_output()] receive:b'Input:\n'
+2026-04-01 20:08:36,459 [INFO uart.py:40 send_input()] data send!
+2026-04-01 20:08:36,560 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x0800036e
+2026-04-01 20:08:36,561 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:36,664 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x0800037c
+2026-04-01 20:08:36,664 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:36,767 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000382
+2026-04-01 20:08:36,768 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:36,872 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000394
+2026-04-01 20:08:36,873 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:36,875 [INFO uart.py:29 wait_for_output()] receive:b'OK\n'
+2026-04-01 20:08:36,876 [INFO uart.py:29 wait_for_output()] receive:b'Input:\n'
+2026-04-01 20:08:36,876 [INFO GDB.py:85 interrupt()] gdb interrupt!
+2026-04-01 20:08:36,876 [INFO GDB.py:80 set_breakpoint()] set breakpoint at 0x8000388
+2026-04-01 20:08:36,877 [INFO GDB.py:80 set_breakpoint()] set breakpoint at 0x800037c
+2026-04-01 20:08:36,877 [INFO GDB.py:80 set_breakpoint()] set breakpoint at 0x8000382
+2026-04-01 20:08:36,877 [INFO GDB.py:80 set_breakpoint()] set breakpoint at 0x8000372
+2026-04-01 20:08:36,877 [INFO fuzzer.py:88 set_breakpoints()] Redistribute all 4 breakpoints
+2026-04-01 20:08:36,877 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:36,878 [INFO uart.py:40 send_input()] data send!
+2026-04-01 20:08:37,077 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x0800036e
+2026-04-01 20:08:37,078 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:37,182 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000372
+2026-04-01 20:08:37,183 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:37,288 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x0800037c
+2026-04-01 20:08:37,288 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:37,393 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000382
+2026-04-01 20:08:37,393 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:37,498 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000388
+2026-04-01 20:08:37,498 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:37,599 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000394
+2026-04-01 20:08:37,599 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:37,602 [INFO uart.py:29 wait_for_output()] receive:b'OK\n'
+2026-04-01 20:08:37,602 [INFO uart.py:29 wait_for_output()] receive:b'Input:\n'
+2026-04-01 20:08:37,603 [INFO uart.py:40 send_input()] data send!
+2026-04-01 20:08:37,704 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x0800036e
+2026-04-01 20:08:37,705 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:37,806 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000372
+2026-04-01 20:08:37,806 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:37,911 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x0800037c
+2026-04-01 20:08:37,911 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:38,014 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000382
+2026-04-01 20:08:38,014 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:38,119 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000388
+2026-04-01 20:08:38,120 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:38,222 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000394
+2026-04-01 20:08:38,223 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:38,226 [INFO uart.py:29 wait_for_output()] receive:b'OK\n'
+2026-04-01 20:08:38,227 [INFO uart.py:29 wait_for_output()] receive:b'Input:\n'
+2026-04-01 20:08:38,228 [INFO uart.py:40 send_input()] data send!
+2026-04-01 20:08:38,327 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x0800036e
+2026-04-01 20:08:38,328 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:38,433 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000372
+2026-04-01 20:08:38,433 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:38,537 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x0800037c
+2026-04-01 20:08:38,538 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:38,642 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000382
+2026-04-01 20:08:38,643 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:38,748 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000388
+2026-04-01 20:08:38,748 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:38,850 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000394
+2026-04-01 20:08:38,851 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:38,854 [INFO uart.py:29 wait_for_output()] receive:b'OK\n'
+2026-04-01 20:08:38,854 [INFO uart.py:29 wait_for_output()] receive:b'Input:\n'
+2026-04-01 20:08:38,854 [INFO uart.py:40 send_input()] data send!
+2026-04-01 20:08:38,955 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x0800036e
+2026-04-01 20:08:38,956 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:39,060 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000372
+2026-04-01 20:08:39,061 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:39,166 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x0800037c
+2026-04-01 20:08:39,166 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:39,267 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000382
+2026-04-01 20:08:39,268 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:39,372 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000388
+2026-04-01 20:08:39,373 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:39,476 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000394
+2026-04-01 20:08:39,477 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:39,480 [INFO uart.py:29 wait_for_output()] receive:b'OK\n'
+2026-04-01 20:08:39,480 [INFO uart.py:29 wait_for_output()] receive:b'Input:\n'
+2026-04-01 20:08:39,481 [INFO GDB.py:85 interrupt()] gdb interrupt!
+2026-04-01 20:08:39,481 [INFO GDB.py:80 set_breakpoint()] set breakpoint at 0x800037a
+2026-04-01 20:08:39,481 [INFO GDB.py:80 set_breakpoint()] set breakpoint at 0x8000388
+2026-04-01 20:08:39,481 [INFO GDB.py:80 set_breakpoint()] set breakpoint at 0x80003b6
+2026-04-01 20:08:39,482 [INFO GDB.py:80 set_breakpoint()] set breakpoint at 0x8000382
+2026-04-01 20:08:39,482 [INFO fuzzer.py:88 set_breakpoints()] Redistribute all 4 breakpoints
+2026-04-01 20:08:39,482 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:39,482 [INFO uart.py:40 send_input()] data send!
+2026-04-01 20:08:39,686 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x0800036e
+2026-04-01 20:08:39,686 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:39,791 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000372
+2026-04-01 20:08:39,792 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:39,897 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x0800037a
+2026-04-01 20:08:39,897 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:40,002 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x0800037c
+2026-04-01 20:08:40,002 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:40,107 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000382
+2026-04-01 20:08:40,107 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:40,212 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000388
+2026-04-01 20:08:40,213 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:40,317 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000394
+2026-04-01 20:08:40,318 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:40,321 [INFO uart.py:29 wait_for_output()] receive:b'OK\n'
+2026-04-01 20:08:40,321 [INFO uart.py:29 wait_for_output()] receive:b'Input:\n'
+2026-04-01 20:08:40,322 [INFO uart.py:40 send_input()] data send!
+2026-04-01 20:08:40,422 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x0800036e
+2026-04-01 20:08:40,423 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:40,527 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000372
+2026-04-01 20:08:40,527 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:40,632 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x0800037a
+2026-04-01 20:08:40,632 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:40,733 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x0800037c
+2026-04-01 20:08:40,733 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:40,837 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000382
+2026-04-01 20:08:40,838 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:40,939 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000388
+2026-04-01 20:08:40,939 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:41,043 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000394
+2026-04-01 20:08:41,044 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:41,047 [INFO uart.py:29 wait_for_output()] receive:b'OK\n'
+2026-04-01 20:08:41,048 [INFO uart.py:29 wait_for_output()] receive:b'Input:\n'
+2026-04-01 20:08:41,048 [INFO uart.py:40 send_input()] data send!
+2026-04-01 20:08:41,148 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x0800036e
+2026-04-01 20:08:41,148 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:41,250 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000372
+2026-04-01 20:08:41,250 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:41,354 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x0800037a
+2026-04-01 20:08:41,354 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:41,459 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x0800037c
+2026-04-01 20:08:41,459 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:41,564 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000382
+2026-04-01 20:08:41,564 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:41,666 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000388
+2026-04-01 20:08:41,667 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:41,770 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000394
+2026-04-01 20:08:41,770 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:41,773 [INFO uart.py:29 wait_for_output()] receive:b'OK\n'
+2026-04-01 20:08:41,774 [INFO uart.py:29 wait_for_output()] receive:b'Input:\n'
+2026-04-01 20:08:41,774 [INFO uart.py:40 send_input()] data send!
+2026-04-01 20:08:41,872 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x0800036e
+2026-04-01 20:08:41,873 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:41,977 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000372
+2026-04-01 20:08:41,978 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:42,079 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x0800037a
+2026-04-01 20:08:42,079 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:42,184 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x0800037c
+2026-04-01 20:08:42,184 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:42,289 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000382
+2026-04-01 20:08:42,289 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:42,394 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000388
+2026-04-01 20:08:42,394 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:42,499 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000394
+2026-04-01 20:08:42,499 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:42,502 [INFO uart.py:29 wait_for_output()] receive:b'OK\n'
+2026-04-01 20:08:42,502 [INFO uart.py:29 wait_for_output()] receive:b'Input:\n'
+2026-04-01 20:08:42,503 [INFO GDB.py:85 interrupt()] gdb interrupt!
+2026-04-01 20:08:42,503 [INFO GDB.py:80 set_breakpoint()] set breakpoint at 0x8000372
+2026-04-01 20:08:42,503 [INFO GDB.py:80 set_breakpoint()] set breakpoint at 0x800039a
+2026-04-01 20:08:42,503 [INFO GDB.py:80 set_breakpoint()] set breakpoint at 0x800036e
+2026-04-01 20:08:42,503 [INFO GDB.py:80 set_breakpoint()] set breakpoint at 0x800037a
+2026-04-01 20:08:42,504 [INFO fuzzer.py:88 set_breakpoints()] Redistribute all 4 breakpoints
+2026-04-01 20:08:42,504 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:42,504 [INFO uart.py:40 send_input()] data send!
+2026-04-01 20:08:42,706 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x0800036e
+2026-04-01 20:08:42,706 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:42,811 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000372
+2026-04-01 20:08:42,811 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:42,914 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x0800037a
+2026-04-01 20:08:42,914 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:43,017 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x0800037c
+2026-04-01 20:08:43,018 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:43,122 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000382
+2026-04-01 20:08:43,123 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:43,225 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000388
+2026-04-01 20:08:43,226 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:43,328 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000394
+2026-04-01 20:08:43,329 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:43,433 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x0800039a
+2026-04-01 20:08:43,433 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:43,437 [INFO uart.py:29 wait_for_output()] receive:b'OK\n'
+2026-04-01 20:08:43,437 [INFO uart.py:29 wait_for_output()] receive:b'Input:\n'
+2026-04-01 20:08:43,437 [INFO uart.py:40 send_input()] data send!
+2026-04-01 20:08:43,538 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x0800036e
+2026-04-01 20:08:43,538 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:43,641 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000372
+2026-04-01 20:08:43,642 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:43,747 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x0800037a
+2026-04-01 20:08:43,747 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:43,849 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x0800037c
+2026-04-01 20:08:43,850 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:43,955 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000382
+2026-04-01 20:08:43,955 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:44,057 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000388
+2026-04-01 20:08:44,058 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:44,162 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000394
+2026-04-01 20:08:44,163 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:44,265 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x0800039a
+2026-04-01 20:08:44,266 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:44,268 [INFO uart.py:29 wait_for_output()] receive:b'OK\n'
+2026-04-01 20:08:44,268 [INFO uart.py:29 wait_for_output()] receive:b'Input:\n'
+2026-04-01 20:08:44,268 [INFO uart.py:40 send_input()] data send!
+2026-04-01 20:08:44,366 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x0800036e
+2026-04-01 20:08:44,367 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:44,468 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000372
+2026-04-01 20:08:44,469 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:44,573 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x0800037a
+2026-04-01 20:08:44,574 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:44,675 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x0800037c
+2026-04-01 20:08:44,676 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:44,781 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000382
+2026-04-01 20:08:44,781 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:44,883 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000388
+2026-04-01 20:08:44,884 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:44,988 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000394
+2026-04-01 20:08:44,989 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:45,094 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x0800039a
+2026-04-01 20:08:45,094 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:45,098 [INFO uart.py:29 wait_for_output()] receive:b'OK\n'
+2026-04-01 20:08:45,098 [INFO uart.py:29 wait_for_output()] receive:b'Input:\n'
+2026-04-01 20:08:45,099 [INFO uart.py:40 send_input()] data send!
+2026-04-01 20:08:45,199 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x0800036e
+2026-04-01 20:08:45,199 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:45,300 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000372
+2026-04-01 20:08:45,301 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:45,401 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x0800037a
+2026-04-01 20:08:45,402 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:45,503 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x0800037c
+2026-04-01 20:08:45,503 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:45,608 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000382
+2026-04-01 20:08:45,608 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:45,713 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000388
+2026-04-01 20:08:45,713 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:45,814 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000394
+2026-04-01 20:08:45,814 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:45,914 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x0800039a
+2026-04-01 20:08:45,914 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:45,918 [INFO uart.py:29 wait_for_output()] receive:b'OK\n'
+2026-04-01 20:08:45,919 [INFO uart.py:29 wait_for_output()] receive:b'Input:\n'
+2026-04-01 20:08:45,919 [INFO GDB.py:85 interrupt()] gdb interrupt!
+2026-04-01 20:08:45,919 [INFO GDB.py:80 set_breakpoint()] set breakpoint at 0x800038e
+2026-04-01 20:08:45,919 [INFO GDB.py:80 set_breakpoint()] set breakpoint at 0x80003a6
+2026-04-01 20:08:45,920 [INFO GDB.py:80 set_breakpoint()] set breakpoint at 0x800039a
+2026-04-01 20:08:45,920 [INFO GDB.py:80 set_breakpoint()] set breakpoint at 0x800037c
+2026-04-01 20:08:45,920 [INFO fuzzer.py:88 set_breakpoints()] Redistribute all 4 breakpoints
+2026-04-01 20:08:45,925 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:45,926 [INFO uart.py:40 send_input()] data send!
+2026-04-01 20:08:46,120 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x0800036e
+2026-04-01 20:08:46,120 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:46,225 [INFO fuzzer.py:73 start_fuzz()] Breakpoint hit at 0x08000372
+2026-04-01 20:08:46,226 [INFO GDB.py:69 continue_run()] continue exec!
+2026-04-01 20:08:46,236 [INFO qemu.py:42 stop()] qemu exit!
+2026-04-01 20:08:46,240 [INFO GDB.py:73 disconnect()] GDB Exit
+2026-04-01 20:08:46,240 [INFO uart.py:47 disconnect()] serial disconnect!

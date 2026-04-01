@@ -1,6 +1,7 @@
 import subprocess
 import time
 import logging as log
+import signal
 
 
 class QEMU:
@@ -38,7 +39,7 @@ class QEMU:
         if self.process is None:
             return
 
-        log.info("qemu stopped")
+        log.info("qemu exit!")
         self.process.terminate()
 
         try:
@@ -47,3 +48,8 @@ class QEMU:
             self.process.kill()
 
         self.process = None
+
+    def interrupt(self):
+        self.process.send_signal(signal.SIGINT)
+
+        log.info("qemu stopped!")
