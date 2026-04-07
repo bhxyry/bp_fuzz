@@ -1,0 +1,969 @@
+2026-04-07 21:00:30,710 [INFO project.py:162 __init__()] Loading binary ./example/fuzz-deadbeef.elf
+2026-04-07 21:00:30,718 [INFO loader.py:907 _internal_load()] Linking /Users/bhxyry/Desktop/毕业设计/bp_fuzz/example/fuzz-deadbeef.elf
+2026-04-07 21:00:30,718 [INFO loader.py:1058 _map_object()] Mapping /Users/bhxyry/Desktop/毕业设计/bp_fuzz/example/fuzz-deadbeef.elf at 0x8000000
+2026-04-07 21:00:30,718 [INFO loader.py:907 _internal_load()] Linking cle##externs
+2026-04-07 21:00:30,718 [INFO loader.py:1058 _map_object()] Mapping cle##externs at 0x20100000
+2026-04-07 21:00:30,718 [INFO loader.py:907 _internal_load()] Linking cle##tls
+2026-04-07 21:00:30,718 [INFO loader.py:1058 _map_object()] Mapping cle##tls at 0x20200000
+2026-04-07 21:00:30,718 [INFO loader.py:1058 _map_object()] Mapping cle##kernel at 0x20300000
+2026-04-07 21:00:30,722 [INFO cfg_base.py:180 __init__()] Loaded 5 indirect jump resolvers (3 timeless, 2 generic).
+2026-04-07 21:00:30,722 [INFO __init__.py:151 make_extern()] Created extern symbol for UnresolvableJumpTarget
+2026-04-07 21:00:30,722 [INFO __init__.py:151 make_extern()] Created extern symbol for UnresolvableCallTarget
+2026-04-07 21:00:30,724 [INFO cfg_fast.py:3557 _preprocess_exception_handlings()] Loaded 0 exception handlings from 0 binaries.
+2026-04-07 21:00:30,724 [INFO cfg_fast.py:2232 _func_addrs_from_prologues()] Found 23 functions with prologue scanning.
+2026-04-07 21:00:30,779 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000b07 in function 0x8000989.
+2026-04-07 21:00:30,786 [INFO jumptable.py:1136 _resolve()] Jump table at 0x8000b07 has 19 targets: 0x80009bb, 0x8000a53, 0x8000a5d, 0x8000a6f, 0x80009d3, 0x80009d3, 0x80009d3, 0x80009d3, 0x80009d3, 0x80009d3, 0x80009d3, 0x80009d3, 0x80009d3, 0x80009d3, 0x80009d3, 0x80009d3, 0x80009d3, 0x8000a57, 0x8000a63
+2026-04-07 21:00:30,792 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000265 in function 0x8000259.
+2026-04-07 21:00:30,798 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000265 in function 0x8000259.
+2026-04-07 21:00:30,804 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000265 in function 0x8000259.
+2026-04-07 21:00:30,809 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000265 in function 0x8000259.
+2026-04-07 21:00:30,812 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000265 in function 0x8000259.
+2026-04-07 21:00:30,815 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000281 in function 0x8000259.
+2026-04-07 21:00:30,822 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000281 in function 0x8000259.
+2026-04-07 21:00:30,830 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000281 in function 0x8000259.
+2026-04-07 21:00:30,830 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'thread-group-added', 'payload': {'id': 'i1'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:30,839 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000281 in function 0x8000259.
+2026-04-07 21:00:30,842 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000281 in function 0x8000259.
+2026-04-07 21:00:30,846 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000283 in function 0x8000259.
+2026-04-07 21:00:30,852 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000283 in function 0x8000259.
+2026-04-07 21:00:30,857 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000283 in function 0x8000259.
+2026-04-07 21:00:30,865 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000283 in function 0x8000259.
+2026-04-07 21:00:30,869 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000283 in function 0x8000259.
+2026-04-07 21:00:30,873 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000267 in function 0x8000259.
+2026-04-07 21:00:30,879 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000267 in function 0x8000259.
+2026-04-07 21:00:30,884 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000267 in function 0x8000259.
+2026-04-07 21:00:30,890 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000267 in function 0x8000259.
+2026-04-07 21:00:30,893 [INFO jumptable.py:1166 _resolve()] Could not resolve indirect jump 0x8000267 in function 0x8000259.
+2026-04-07 21:00:30,910 [INFO binaryanalyzer.py:42 generate_cfg()] binary analyzer complete!
+2026-04-07 21:00:30,910 [INFO binaryanalyzer.py:87 build_dominator_tree()] Dominator Tree complete!
+2026-04-07 21:00:30,913 [INFO qemu.py:34 start()] qemu started
+2026-04-07 21:00:31,918 [INFO GDB.py:67 connect()] gdb connected!
+2026-04-07 21:00:31,923 [INFO uart.py:19 connect()] UART connected!
+2026-04-07 21:00:31,981 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:31,982 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:31,982 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'thread-group-started', 'payload': {'id': 'i1', 'pid': '1'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:31,982 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'thread-created', 'payload': {'id': '1', 'group-id': 'i1'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:32,087 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': 'Reset_Handler () at startup_stm32f100xb.s:64\n', 'stream': 'stdout'}
+2026-04-07 21:00:32,087 [INFO GDB.py:39 _handle_response()] [GDB]Reset_Handler () at startup_stm32f100xb.s:64
+
+2026-04-07 21:00:32,087 [INFO GDB.py:28 _listener_loop()] {'type': 'log', 'message': None, 'payload': '⚠️ warning: 64\tstartup_stm32f100xb.s: No such file or directory\n', 'stream': 'stdout'}
+2026-04-07 21:00:32,087 [INFO GDB.py:39 _handle_response()] [GDB]⚠️ warning: 64	startup_stm32f100xb.s: No such file or directory
+
+2026-04-07 21:00:32,087 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'stopped', 'payload': {'frame': {'addr': '0x08000c78', 'func': 'Reset_Handler', 'args': [], 'file': 'startup_stm32f100xb.s', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/startup_stm32f100xb.s', 'line': '64', 'arch': 'armv7'}, 'thread-id': '1', 'stopped-threads': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:32,087 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'connected', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:32,929 [INFO GDB.py:70 continue_run()] continue exec!
+2026-04-07 21:00:32,937 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:32,939 [INFO GDB.py:87 interrupt()] gdb interrupt!
+2026-04-07 21:00:32,940 [INFO uart.py:44 send_input()] [data send]:b'8OX77iQ1TtjwMXH2kgZxAApwksKs\n'
+2026-04-07 21:00:33,024 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'running', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,024 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'running', 'payload': {'thread-id': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,024 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,024 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '\nProgram', 'stream': 'stdout'}
+2026-04-07 21:00:33,024 [INFO GDB.py:39 _handle_response()] [GDB]
+Program
+2026-04-07 21:00:33,024 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': ' received signal SIGINT, Interrupt.\n', 'stream': 'stdout'}
+2026-04-07 21:00:33,024 [INFO GDB.py:39 _handle_response()] [GDB] received signal SIGINT, Interrupt.
+
+2026-04-07 21:00:33,129 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': 'SysTick_Handler () at Core/Src/stm32f1xx_it.c:184\n', 'stream': 'stdout'}
+2026-04-07 21:00:33,130 [INFO GDB.py:39 _handle_response()] [GDB]SysTick_Handler () at Core/Src/stm32f1xx_it.c:184
+
+2026-04-07 21:00:33,130 [INFO GDB.py:28 _listener_loop()] {'type': 'log', 'message': None, 'payload': '⚠️ warning: 184\tCore/Src/stm32f1xx_it.c: No such file or directory\n', 'stream': 'stdout'}
+2026-04-07 21:00:33,130 [INFO GDB.py:39 _handle_response()] [GDB]⚠️ warning: 184	Core/Src/stm32f1xx_it.c: No such file or directory
+
+2026-04-07 21:00:33,130 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'stopped', 'payload': {'reason': 'signal-received', 'signal-name': 'SIGINT', 'signal-meaning': 'Interrupt', 'frame': {'addr': '0x08000430', 'func': 'SysTick_Handler', 'args': [], 'file': 'Core/Src/stm32f1xx_it.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/stm32f1xx_it.c', 'line': '184', 'arch': 'armv7'}, 'thread-id': '1', 'stopped-threads': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,130 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x800037a
+2026-04-07 21:00:33,130 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x8000398
+2026-04-07 21:00:33,131 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x8000378
+2026-04-07 21:00:33,131 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x800038c
+2026-04-07 21:00:33,131 [INFO fuzzer.py:107 set_breakpoints()] Redistribute all 4 breakpoints
+2026-04-07 21:00:33,131 [INFO GDB.py:70 continue_run()] continue exec!
+2026-04-07 21:00:33,190 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:33,191 [INFO uart.py:44 send_input()] [data send]:b'dBhjLrAlwgaDJw96V2y0dl4wgLBumjj\n'
+2026-04-07 21:00:33,191 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:33,191 [INFO uart.py:44 send_input()] [data send]:b'PzwQMIJ7VIkqCWETVhTwvpxQDZ\n'
+2026-04-07 21:00:33,192 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:33,192 [INFO uart.py:44 send_input()] [data send]:b'H5fZqi0MJYDyuC7l0gPZv\n'
+2026-04-07 21:00:33,192 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:33,192 [INFO GDB.py:87 interrupt()] gdb interrupt!
+2026-04-07 21:00:33,192 [INFO uart.py:44 send_input()] [data send]:b'myhoRZlCzbOMN\n'
+2026-04-07 21:00:33,232 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,233 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '1', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x0800037a', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '236', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x800037a'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,233 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,233 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '2', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x08000398', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '246', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x8000398'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,233 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,233 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '3', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x08000378', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '259', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x8000378'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,233 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,233 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '4', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x0800038c', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '242', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x800038c'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,233 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'running', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,233 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'running', 'payload': {'thread-id': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,233 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,233 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '\nProgram', 'stream': 'stdout'}
+2026-04-07 21:00:33,233 [INFO GDB.py:39 _handle_response()] [GDB]
+Program
+2026-04-07 21:00:33,233 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': ' received signal SIGINT, Interrupt.\n', 'stream': 'stdout'}
+2026-04-07 21:00:33,233 [INFO GDB.py:39 _handle_response()] [GDB] received signal SIGINT, Interrupt.
+
+2026-04-07 21:00:33,338 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '0x08000642 in UART_WaitOnFlagUntilTimeout (huart=huart@entry=0x2000003c <huart1>, Flag=Flag@entry=32, Status=Status@entry=RESET, Tickstart=Tickstart@entry=18, Timeout=Timeout@entry=4294967295) at Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c:3189\n', 'stream': 'stdout'}
+2026-04-07 21:00:33,338 [INFO GDB.py:39 _handle_response()] [GDB]0x08000642 in UART_WaitOnFlagUntilTimeout (huart=huart@entry=0x2000003c <huart1>, Flag=Flag@entry=32, Status=Status@entry=RESET, Tickstart=Tickstart@entry=18, Timeout=Timeout@entry=4294967295) at Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c:3189
+
+2026-04-07 21:00:33,339 [INFO GDB.py:28 _listener_loop()] {'type': 'log', 'message': None, 'payload': '⚠️ warning: 3189\tDrivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c: No such file or directory\n', 'stream': 'stdout'}
+2026-04-07 21:00:33,339 [INFO GDB.py:39 _handle_response()] [GDB]⚠️ warning: 3189	Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c: No such file or directory
+
+2026-04-07 21:00:33,339 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'stopped', 'payload': {'reason': 'signal-received', 'signal-name': 'SIGINT', 'signal-meaning': 'Interrupt', 'frame': {'addr': '0x08000642', 'func': 'UART_WaitOnFlagUntilTimeout', 'args': [{'name': 'huart', 'value': '0x2000003c <huart1>'}, {'name': 'huart@entry', 'value': '0x2000003c <huart1>'}, {'name': 'Flag', 'value': '32'}, {'name': 'Flag@entry', 'value': '32'}, {'name': 'Status', 'value': 'RESET'}, {'name': 'Status@entry', 'value': 'RESET'}, {'name': 'Tickstart', 'value': '18'}, {'name': 'Tickstart@entry', 'value': '18'}, {'name': 'Timeout', 'value': '4294967295'}, {'name': 'Timeout@entry', 'value': '4294967295'}], 'file': 'Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c', 'line': '3189', 'arch': 'armv7'}, 'thread-id': '1', 'stopped-threads': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,343 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x80003a4
+2026-04-07 21:00:33,343 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x800038c
+2026-04-07 21:00:33,343 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x8000378
+2026-04-07 21:00:33,343 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x800037a
+2026-04-07 21:00:33,344 [INFO fuzzer.py:107 set_breakpoints()] Redistribute all 4 breakpoints
+2026-04-07 21:00:33,344 [INFO GDB.py:70 continue_run()] continue exec!
+2026-04-07 21:00:33,345 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:33,345 [INFO uart.py:44 send_input()] [data send]:b'wDBzbgmHYtJRv2Tc\n'
+2026-04-07 21:00:33,345 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:33,345 [INFO uart.py:44 send_input()] [data send]:b'pv0q0IosfqZOG\n'
+2026-04-07 21:00:33,346 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:33,346 [INFO uart.py:44 send_input()] [data send]:b'Oz79dhksnKLAh2FtviRKal4i\n'
+2026-04-07 21:00:33,346 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:33,346 [INFO GDB.py:87 interrupt()] gdb interrupt!
+2026-04-07 21:00:33,346 [INFO uart.py:44 send_input()] [data send]:b'AzXKAV8\n'
+2026-04-07 21:00:33,445 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,445 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '5', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x080003a4', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '250', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x80003a4'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,445 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,445 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '6', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x0800038c', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '242', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x800038c'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,445 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,445 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '7', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x08000378', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '259', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x8000378'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,446 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,446 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '8', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x0800037a', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '236', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x800037a'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,446 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'running', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,446 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'running', 'payload': {'thread-id': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,446 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,446 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '\nProgram', 'stream': 'stdout'}
+2026-04-07 21:00:33,446 [INFO GDB.py:39 _handle_response()] [GDB]
+Program
+2026-04-07 21:00:33,446 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': ' received signal SIGINT, Interrupt.\n', 'stream': 'stdout'}
+2026-04-07 21:00:33,446 [INFO GDB.py:39 _handle_response()] [GDB] received signal SIGINT, Interrupt.
+
+2026-04-07 21:00:33,446 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '0x08000642 in UART_WaitOnFlagUntilTimeout (huart=huart@entry=0x2000003c <huart1>, Flag=Flag@entry=32, Status=Status@entry=RESET, Tickstart=Tickstart@entry=25, Timeout=Timeout@entry=4294967295) at Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c:3189\n', 'stream': 'stdout'}
+2026-04-07 21:00:33,446 [INFO GDB.py:39 _handle_response()] [GDB]0x08000642 in UART_WaitOnFlagUntilTimeout (huart=huart@entry=0x2000003c <huart1>, Flag=Flag@entry=32, Status=Status@entry=RESET, Tickstart=Tickstart@entry=25, Timeout=Timeout@entry=4294967295) at Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c:3189
+
+2026-04-07 21:00:33,446 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '3189\tin Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c\n', 'stream': 'stdout'}
+2026-04-07 21:00:33,446 [INFO GDB.py:39 _handle_response()] [GDB]3189	in Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c
+
+2026-04-07 21:00:33,446 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'stopped', 'payload': {'reason': 'signal-received', 'signal-name': 'SIGINT', 'signal-meaning': 'Interrupt', 'frame': {'addr': '0x08000642', 'func': 'UART_WaitOnFlagUntilTimeout', 'args': [{'name': 'huart', 'value': '0x2000003c <huart1>'}, {'name': 'huart@entry', 'value': '0x2000003c <huart1>'}, {'name': 'Flag', 'value': '32'}, {'name': 'Flag@entry', 'value': '32'}, {'name': 'Status', 'value': 'RESET'}, {'name': 'Status@entry', 'value': 'RESET'}, {'name': 'Tickstart', 'value': '25'}, {'name': 'Tickstart@entry', 'value': '25'}, {'name': 'Timeout', 'value': '4294967295'}, {'name': 'Timeout@entry', 'value': '4294967295'}], 'file': 'Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c', 'line': '3189', 'arch': 'armv7'}, 'thread-id': '1', 'stopped-threads': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,447 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x8000398
+2026-04-07 21:00:33,447 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x80003b4
+2026-04-07 21:00:33,447 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x8000378
+2026-04-07 21:00:33,447 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x8000392
+2026-04-07 21:00:33,447 [INFO fuzzer.py:107 set_breakpoints()] Redistribute all 4 breakpoints
+2026-04-07 21:00:33,447 [INFO GDB.py:70 continue_run()] continue exec!
+2026-04-07 21:00:33,449 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:33,449 [INFO uart.py:44 send_input()] [data send]:b'TZiu1iysjXu5\n'
+2026-04-07 21:00:33,449 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:33,449 [INFO uart.py:44 send_input()] [data send]:b'Btl85feSmQINAcScqsG\n'
+2026-04-07 21:00:33,449 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:33,450 [INFO uart.py:44 send_input()] [data send]:b'5sqH2IfOzRlgRCKgr7kTdzffHIndY\n'
+2026-04-07 21:00:33,450 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:33,450 [INFO GDB.py:87 interrupt()] gdb interrupt!
+2026-04-07 21:00:33,450 [INFO uart.py:44 send_input()] [data send]:b'1eS1dy1OILBkFTWyyAucMnF88PS0\n'
+2026-04-07 21:00:33,552 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,553 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '9', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x08000398', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '246', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x8000398'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,553 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,553 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '10', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x080003b4', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '250', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x80003b4'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,554 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,554 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '11', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x08000378', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '259', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x8000378'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,554 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,554 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '12', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x08000392', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '244', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x8000392'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,554 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'running', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,554 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'running', 'payload': {'thread-id': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,554 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,554 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '\nProgram', 'stream': 'stdout'}
+2026-04-07 21:00:33,555 [INFO GDB.py:39 _handle_response()] [GDB]
+Program
+2026-04-07 21:00:33,555 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': ' received signal SIGINT, Interrupt.\n', 'stream': 'stdout'}
+2026-04-07 21:00:33,555 [INFO GDB.py:39 _handle_response()] [GDB] received signal SIGINT, Interrupt.
+
+2026-04-07 21:00:33,555 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '0x08000642 in UART_WaitOnFlagUntilTimeout (huart=huart@entry=0x2000003c <huart1>, Flag=Flag@entry=32, Status=Status@entry=RESET, Tickstart=Tickstart@entry=31, Timeout=Timeout@entry=4294967295) at Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c:3189\n', 'stream': 'stdout'}
+2026-04-07 21:00:33,555 [INFO GDB.py:39 _handle_response()] [GDB]0x08000642 in UART_WaitOnFlagUntilTimeout (huart=huart@entry=0x2000003c <huart1>, Flag=Flag@entry=32, Status=Status@entry=RESET, Tickstart=Tickstart@entry=31, Timeout=Timeout@entry=4294967295) at Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c:3189
+
+2026-04-07 21:00:33,555 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '3189\tin Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c\n', 'stream': 'stdout'}
+2026-04-07 21:00:33,555 [INFO GDB.py:39 _handle_response()] [GDB]3189	in Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c
+
+2026-04-07 21:00:33,555 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'stopped', 'payload': {'reason': 'signal-received', 'signal-name': 'SIGINT', 'signal-meaning': 'Interrupt', 'frame': {'addr': '0x08000642', 'func': 'UART_WaitOnFlagUntilTimeout', 'args': [{'name': 'huart', 'value': '0x2000003c <huart1>'}, {'name': 'huart@entry', 'value': '0x2000003c <huart1>'}, {'name': 'Flag', 'value': '32'}, {'name': 'Flag@entry', 'value': '32'}, {'name': 'Status', 'value': 'RESET'}, {'name': 'Status@entry', 'value': 'RESET'}, {'name': 'Tickstart', 'value': '31'}, {'name': 'Tickstart@entry', 'value': '31'}, {'name': 'Timeout', 'value': '4294967295'}, {'name': 'Timeout@entry', 'value': '4294967295'}], 'file': 'Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c', 'line': '3189', 'arch': 'armv7'}, 'thread-id': '1', 'stopped-threads': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,557 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x8000386
+2026-04-07 21:00:33,557 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x800037a
+2026-04-07 21:00:33,558 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x8000398
+2026-04-07 21:00:33,558 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x800036c
+2026-04-07 21:00:33,559 [INFO fuzzer.py:107 set_breakpoints()] Redistribute all 4 breakpoints
+2026-04-07 21:00:33,559 [INFO GDB.py:70 continue_run()] continue exec!
+2026-04-07 21:00:33,657 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,658 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '13', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x08000386', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '240', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x8000386'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,658 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,658 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '14', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x0800037a', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '236', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x800037a'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,658 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,658 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '15', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x08000398', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '246', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x8000398'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,658 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,658 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '16', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x0800036c', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '232', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x800036c'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,658 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'running', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,658 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'running', 'payload': {'thread-id': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,658 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'breakpoint-modified', 'payload': {'bkpt': {'number': '16', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x0800036c', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '232', 'thread-groups': ['i1'], 'times': '1', 'original-location': '*0x800036c'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,763 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '\n', 'stream': 'stdout'}
+2026-04-07 21:00:33,764 [INFO GDB.py:39 _handle_response()] [GDB]
+
+2026-04-07 21:00:33,764 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': 'Breakpoint 16, deadbeef (buf=buf@entry=0x20000028 <buffer> "Oz79dhksnKLAh2Ft", size=16) at Core/Src/main.c:232\n', 'stream': 'stdout'}
+2026-04-07 21:00:33,764 [INFO GDB.py:39 _handle_response()] [GDB]Breakpoint 16, deadbeef (buf=buf@entry=0x20000028 <buffer> "Oz79dhksnKLAh2Ft", size=16) at Core/Src/main.c:232
+
+2026-04-07 21:00:33,764 [INFO GDB.py:28 _listener_loop()] {'type': 'log', 'message': None, 'payload': '⚠️ warning: 232\tCore/Src/main.c: No such file or directory\n', 'stream': 'stdout'}
+2026-04-07 21:00:33,765 [INFO GDB.py:39 _handle_response()] [GDB]⚠️ warning: 232	Core/Src/main.c: No such file or directory
+
+2026-04-07 21:00:33,765 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'stopped', 'payload': {'reason': 'breakpoint-hit', 'disp': 'keep', 'bkptno': '16', 'frame': {'addr': '0x0800036c', 'func': 'deadbeef', 'args': [{'name': 'buf', 'value': '0x20000028 <buffer> "Oz79dhksnKLAh2Ft"'}, {'name': 'buf@entry', 'value': '0x20000028 <buffer> "Oz79dhksnKLAh2Ft"'}, {'name': 'size', 'value': '16'}], 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '232', 'arch': 'armv7'}, 'thread-id': '1', 'stopped-threads': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,765 [INFO fuzzer.py:78 start_fuzz()] Breakpoint hit at 0x0800036c
+2026-04-07 21:00:33,767 [INFO GDB.py:70 continue_run()] continue exec!
+2026-04-07 21:00:33,769 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:33,770 [INFO uart.py:44 send_input()] [data send]:b'tpijiiN9C7ROKo2oZcb\n'
+2026-04-07 21:00:33,869 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'running', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,870 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'running', 'payload': {'thread-id': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,870 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'breakpoint-modified', 'payload': {'bkpt': {'number': '16', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x0800036c', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '232', 'thread-groups': ['i1'], 'times': '2', 'original-location': '*0x800036c'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,870 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '\n', 'stream': 'stdout'}
+2026-04-07 21:00:33,870 [INFO GDB.py:39 _handle_response()] [GDB]
+
+2026-04-07 21:00:33,870 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': 'Breakpoint 16, deadbeef (buf=buf@entry=0x20000028 <buffer> "viRKal4i\\nKLAh2Ft", size=9) at Core/Src/main.c:232\n', 'stream': 'stdout'}
+2026-04-07 21:00:33,870 [INFO GDB.py:39 _handle_response()] [GDB]Breakpoint 16, deadbeef (buf=buf@entry=0x20000028 <buffer> "viRKal4i\nKLAh2Ft", size=9) at Core/Src/main.c:232
+
+2026-04-07 21:00:33,870 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '232\tin Core/Src/main.c\n', 'stream': 'stdout'}
+2026-04-07 21:00:33,870 [INFO GDB.py:39 _handle_response()] [GDB]232	in Core/Src/main.c
+
+2026-04-07 21:00:33,870 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'stopped', 'payload': {'reason': 'breakpoint-hit', 'disp': 'keep', 'bkptno': '16', 'frame': {'addr': '0x0800036c', 'func': 'deadbeef', 'args': [{'name': 'buf', 'value': '0x20000028 <buffer> "viRKal4i\\nKLAh2Ft"'}, {'name': 'buf@entry', 'value': '0x20000028 <buffer> "viRKal4i\\nKLAh2Ft"'}, {'name': 'size', 'value': '9'}], 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '232', 'arch': 'armv7'}, 'thread-id': '1', 'stopped-threads': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,870 [INFO fuzzer.py:78 start_fuzz()] Breakpoint hit at 0x0800036c
+2026-04-07 21:00:33,871 [INFO GDB.py:70 continue_run()] continue exec!
+2026-04-07 21:00:33,872 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:33,872 [INFO uart.py:44 send_input()] [data send]:b'kepwvuZNbVilyd7lD25\n'
+2026-04-07 21:00:33,976 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'running', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,976 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'running', 'payload': {'thread-id': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,976 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'breakpoint-modified', 'payload': {'bkpt': {'number': '16', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x0800036c', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '232', 'thread-groups': ['i1'], 'times': '3', 'original-location': '*0x800036c'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,977 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '\n', 'stream': 'stdout'}
+2026-04-07 21:00:33,977 [INFO GDB.py:39 _handle_response()] [GDB]
+
+2026-04-07 21:00:33,977 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': 'Breakpoint 16, deadbeef (buf=buf@entry=0x20000028 <buffer> "AzXKAV8\\n\\nKLAh2Ft", size=8) at Core/Src/main.c:232\n', 'stream': 'stdout'}
+2026-04-07 21:00:33,977 [INFO GDB.py:39 _handle_response()] [GDB]Breakpoint 16, deadbeef (buf=buf@entry=0x20000028 <buffer> "AzXKAV8\n\nKLAh2Ft", size=8) at Core/Src/main.c:232
+
+2026-04-07 21:00:33,978 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '232\tin Core/Src/main.c\n', 'stream': 'stdout'}
+2026-04-07 21:00:33,978 [INFO GDB.py:39 _handle_response()] [GDB]232	in Core/Src/main.c
+
+2026-04-07 21:00:33,978 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'stopped', 'payload': {'reason': 'breakpoint-hit', 'disp': 'keep', 'bkptno': '16', 'frame': {'addr': '0x0800036c', 'func': 'deadbeef', 'args': [{'name': 'buf', 'value': '0x20000028 <buffer> "AzXKAV8\\n\\nKLAh2Ft"'}, {'name': 'buf@entry', 'value': '0x20000028 <buffer> "AzXKAV8\\n\\nKLAh2Ft"'}, {'name': 'size', 'value': '8'}], 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '232', 'arch': 'armv7'}, 'thread-id': '1', 'stopped-threads': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:33,978 [INFO fuzzer.py:78 start_fuzz()] Breakpoint hit at 0x0800036c
+2026-04-07 21:00:33,978 [INFO GDB.py:70 continue_run()] continue exec!
+2026-04-07 21:00:33,981 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:33,981 [INFO uart.py:44 send_input()] [data send]:b'1GWXY\n'
+2026-04-07 21:00:34,083 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'running', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,084 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'running', 'payload': {'thread-id': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,084 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'breakpoint-modified', 'payload': {'bkpt': {'number': '16', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x0800036c', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '232', 'thread-groups': ['i1'], 'times': '4', 'original-location': '*0x800036c'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,085 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '\n', 'stream': 'stdout'}
+2026-04-07 21:00:34,085 [INFO GDB.py:39 _handle_response()] [GDB]
+
+2026-04-07 21:00:34,085 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': 'Breakpoint 16, deadbeef (buf=buf@entry=0x20000028 <buffer> "TZiu1iysjXu5\\n2Ft", size=13) at Core/Src/main.c:232\n', 'stream': 'stdout'}
+2026-04-07 21:00:34,085 [INFO GDB.py:39 _handle_response()] [GDB]Breakpoint 16, deadbeef (buf=buf@entry=0x20000028 <buffer> "TZiu1iysjXu5\n2Ft", size=13) at Core/Src/main.c:232
+
+2026-04-07 21:00:34,085 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '232\tin Core/Src/main.c\n', 'stream': 'stdout'}
+2026-04-07 21:00:34,085 [INFO GDB.py:39 _handle_response()] [GDB]232	in Core/Src/main.c
+
+2026-04-07 21:00:34,086 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'stopped', 'payload': {'reason': 'breakpoint-hit', 'disp': 'keep', 'bkptno': '16', 'frame': {'addr': '0x0800036c', 'func': 'deadbeef', 'args': [{'name': 'buf', 'value': '0x20000028 <buffer> "TZiu1iysjXu5\\n2Ft"'}, {'name': 'buf@entry', 'value': '0x20000028 <buffer> "TZiu1iysjXu5\\n2Ft"'}, {'name': 'size', 'value': '13'}], 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '232', 'arch': 'armv7'}, 'thread-id': '1', 'stopped-threads': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,086 [INFO fuzzer.py:78 start_fuzz()] Breakpoint hit at 0x0800036c
+2026-04-07 21:00:34,086 [INFO GDB.py:70 continue_run()] continue exec!
+2026-04-07 21:00:34,089 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:34,089 [INFO GDB.py:87 interrupt()] gdb interrupt!
+2026-04-07 21:00:34,090 [INFO uart.py:44 send_input()] [data send]:b'ABGBlO196XdYd3mh\n'
+2026-04-07 21:00:34,187 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'running', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,187 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'running', 'payload': {'thread-id': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,187 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,187 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '\nProgram', 'stream': 'stdout'}
+2026-04-07 21:00:34,188 [INFO GDB.py:39 _handle_response()] [GDB]
+Program
+2026-04-07 21:00:34,188 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': ' received signal SIGINT, Interrupt.\n', 'stream': 'stdout'}
+2026-04-07 21:00:34,188 [INFO GDB.py:39 _handle_response()] [GDB] received signal SIGINT, Interrupt.
+
+2026-04-07 21:00:34,293 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': 'SysTick_Handler () at Core/Src/stm32f1xx_it.c:184\n', 'stream': 'stdout'}
+2026-04-07 21:00:34,293 [INFO GDB.py:39 _handle_response()] [GDB]SysTick_Handler () at Core/Src/stm32f1xx_it.c:184
+
+2026-04-07 21:00:34,293 [INFO GDB.py:28 _listener_loop()] {'type': 'log', 'message': None, 'payload': '⚠️ warning: 184\tCore/Src/stm32f1xx_it.c: No such file or directory\n', 'stream': 'stdout'}
+2026-04-07 21:00:34,293 [INFO GDB.py:39 _handle_response()] [GDB]⚠️ warning: 184	Core/Src/stm32f1xx_it.c: No such file or directory
+
+2026-04-07 21:00:34,294 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'stopped', 'payload': {'reason': 'signal-received', 'signal-name': 'SIGINT', 'signal-meaning': 'Interrupt', 'frame': {'addr': '0x08000430', 'func': 'SysTick_Handler', 'args': [], 'file': 'Core/Src/stm32f1xx_it.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/stm32f1xx_it.c', 'line': '184', 'arch': 'armv7'}, 'thread-id': '1', 'stopped-threads': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,294 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x8000378
+2026-04-07 21:00:34,294 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x80003a4
+2026-04-07 21:00:34,294 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x8000398
+2026-04-07 21:00:34,294 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x800039e
+2026-04-07 21:00:34,294 [INFO fuzzer.py:107 set_breakpoints()] Redistribute all 4 breakpoints
+2026-04-07 21:00:34,295 [INFO GDB.py:70 continue_run()] continue exec!
+2026-04-07 21:00:34,297 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:34,298 [INFO uart.py:44 send_input()] [data send]:b'DXnPF0R9uj\n'
+2026-04-07 21:00:34,298 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:34,298 [INFO uart.py:44 send_input()] [data send]:b'KN7XL3nJDLgGejJhxMuJ52\n'
+2026-04-07 21:00:34,299 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:34,299 [INFO uart.py:44 send_input()] [data send]:b'1XLkfWf3XwZFzc344TbpPO\n'
+2026-04-07 21:00:34,300 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:34,300 [INFO GDB.py:87 interrupt()] gdb interrupt!
+2026-04-07 21:00:34,301 [INFO uart.py:44 send_input()] [data send]:b'ADV6GsvBRJk6T\n'
+2026-04-07 21:00:34,397 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,397 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '17', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x08000378', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '259', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x8000378'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,397 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,397 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '18', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x080003a4', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '250', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x80003a4'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,397 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,397 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '19', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x08000398', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '246', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x8000398'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,397 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,397 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '20', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x0800039e', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '248', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x800039e'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,397 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'running', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,397 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'running', 'payload': {'thread-id': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,397 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,397 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '\nProgram', 'stream': 'stdout'}
+2026-04-07 21:00:34,397 [INFO GDB.py:39 _handle_response()] [GDB]
+Program
+2026-04-07 21:00:34,397 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': ' received signal SIGINT, Interrupt.\n', 'stream': 'stdout'}
+2026-04-07 21:00:34,397 [INFO GDB.py:39 _handle_response()] [GDB] received signal SIGINT, Interrupt.
+
+2026-04-07 21:00:34,397 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '0x08000642 in UART_WaitOnFlagUntilTimeout (huart=huart@entry=0x2000003c <huart1>, Flag=Flag@entry=32, Status=Status@entry=RESET, Tickstart=Tickstart@entry=67, Timeout=Timeout@entry=4294967295) at Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c:3189\n', 'stream': 'stdout'}
+2026-04-07 21:00:34,397 [INFO GDB.py:39 _handle_response()] [GDB]0x08000642 in UART_WaitOnFlagUntilTimeout (huart=huart@entry=0x2000003c <huart1>, Flag=Flag@entry=32, Status=Status@entry=RESET, Tickstart=Tickstart@entry=67, Timeout=Timeout@entry=4294967295) at Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c:3189
+
+2026-04-07 21:00:34,397 [INFO GDB.py:28 _listener_loop()] {'type': 'log', 'message': None, 'payload': '⚠️ warning: 3189\tDrivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c: No such file or directory\n', 'stream': 'stdout'}
+2026-04-07 21:00:34,398 [INFO GDB.py:39 _handle_response()] [GDB]⚠️ warning: 3189	Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c: No such file or directory
+
+2026-04-07 21:00:34,398 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'stopped', 'payload': {'reason': 'signal-received', 'signal-name': 'SIGINT', 'signal-meaning': 'Interrupt', 'frame': {'addr': '0x08000642', 'func': 'UART_WaitOnFlagUntilTimeout', 'args': [{'name': 'huart', 'value': '0x2000003c <huart1>'}, {'name': 'huart@entry', 'value': '0x2000003c <huart1>'}, {'name': 'Flag', 'value': '32'}, {'name': 'Flag@entry', 'value': '32'}, {'name': 'Status', 'value': 'RESET'}, {'name': 'Status@entry', 'value': 'RESET'}, {'name': 'Tickstart', 'value': '67'}, {'name': 'Tickstart@entry', 'value': '67'}, {'name': 'Timeout', 'value': '4294967295'}, {'name': 'Timeout@entry', 'value': '4294967295'}], 'file': 'Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c', 'line': '3189', 'arch': 'armv7'}, 'thread-id': '1', 'stopped-threads': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,398 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x800036c
+2026-04-07 21:00:34,398 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x8000392
+2026-04-07 21:00:34,399 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x800038c
+2026-04-07 21:00:34,399 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x800039e
+2026-04-07 21:00:34,399 [INFO fuzzer.py:107 set_breakpoints()] Redistribute all 4 breakpoints
+2026-04-07 21:00:34,399 [INFO GDB.py:70 continue_run()] continue exec!
+2026-04-07 21:00:34,400 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:34,400 [INFO uart.py:44 send_input()] [data send]:b'PuztovpZxtwbTJT4lF1p\n'
+2026-04-07 21:00:34,401 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:34,401 [INFO uart.py:44 send_input()] [data send]:b'xYs2JY7rxfxINOSV8Yal1paE2yybbX\n'
+2026-04-07 21:00:34,402 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:34,402 [INFO uart.py:44 send_input()] [data send]:b'8yXlH3KviaXorGlati\n'
+2026-04-07 21:00:34,402 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:34,402 [INFO GDB.py:87 interrupt()] gdb interrupt!
+2026-04-07 21:00:34,402 [INFO uart.py:44 send_input()] [data send]:b'F30BBoaJsAzJiGt\n'
+2026-04-07 21:00:34,503 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,503 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '21', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x0800036c', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '232', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x800036c'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,504 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,504 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '22', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x08000392', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '244', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x8000392'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,504 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,504 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '23', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x0800038c', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '242', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x800038c'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,504 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,504 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '24', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x0800039e', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '248', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x800039e'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,504 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'running', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,504 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'running', 'payload': {'thread-id': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,504 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,504 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '\nProgram', 'stream': 'stdout'}
+2026-04-07 21:00:34,504 [INFO GDB.py:39 _handle_response()] [GDB]
+Program
+2026-04-07 21:00:34,504 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': ' received signal SIGINT, Interrupt.\n', 'stream': 'stdout'}
+2026-04-07 21:00:34,504 [INFO GDB.py:39 _handle_response()] [GDB] received signal SIGINT, Interrupt.
+
+2026-04-07 21:00:34,504 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '0x08000858 in HAL_UART_Receive (huart=huart@entry=0x2000003c <huart1>, pData=pData@entry=0x20001fe7 "p(", Size=Size@entry=1, Timeout=Timeout@entry=4294967295) at Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c:1278\n', 'stream': 'stdout'}
+2026-04-07 21:00:34,504 [INFO GDB.py:39 _handle_response()] [GDB]0x08000858 in HAL_UART_Receive (huart=huart@entry=0x2000003c <huart1>, pData=pData@entry=0x20001fe7 "p(", Size=Size@entry=1, Timeout=Timeout@entry=4294967295) at Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c:1278
+
+2026-04-07 21:00:34,504 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '1278\tin Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c\n', 'stream': 'stdout'}
+2026-04-07 21:00:34,504 [INFO GDB.py:39 _handle_response()] [GDB]1278	in Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c
+
+2026-04-07 21:00:34,504 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'stopped', 'payload': {'reason': 'signal-received', 'signal-name': 'SIGINT', 'signal-meaning': 'Interrupt', 'frame': {'addr': '0x08000858', 'func': 'HAL_UART_Receive', 'args': [{'name': 'huart', 'value': '0x2000003c <huart1>'}, {'name': 'huart@entry', 'value': '0x2000003c <huart1>'}, {'name': 'pData', 'value': '0x20001fe7 "p("'}, {'name': 'pData@entry', 'value': '0x20001fe7 "p("'}, {'name': 'Size', 'value': '1'}, {'name': 'Size@entry', 'value': '1'}, {'name': 'Timeout', 'value': '4294967295'}, {'name': 'Timeout@entry', 'value': '4294967295'}], 'file': 'Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c', 'line': '1278', 'arch': 'armv7'}, 'thread-id': '1', 'stopped-threads': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,505 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x80003b2
+2026-04-07 21:00:34,505 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x800039e
+2026-04-07 21:00:34,505 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x8000370
+2026-04-07 21:00:34,505 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x8000380
+2026-04-07 21:00:34,505 [INFO fuzzer.py:107 set_breakpoints()] Redistribute all 4 breakpoints
+2026-04-07 21:00:34,505 [INFO GDB.py:70 continue_run()] continue exec!
+2026-04-07 21:00:34,507 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:34,507 [INFO uart.py:44 send_input()] [data send]:b'Hb5gc8jm\n'
+2026-04-07 21:00:34,507 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:34,507 [INFO uart.py:44 send_input()] [data send]:b'F\n'
+2026-04-07 21:00:34,507 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:34,508 [INFO uart.py:44 send_input()] [data send]:b'JjHzrtzTXLfzihjpJa4GLQQpjSkrD\n'
+2026-04-07 21:00:34,508 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:34,508 [INFO GDB.py:87 interrupt()] gdb interrupt!
+2026-04-07 21:00:34,509 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:34,509 [INFO uart.py:44 send_input()] [data send]:b'1YdGAkOKgoKGOycsCgGyjpKTU7D\n'
+2026-04-07 21:00:34,509 [INFO uart.py:44 send_input()] [data send]:b'r4gL1sZa2fHd1SQtzXroL\n'
+2026-04-07 21:00:34,610 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,610 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '25', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x080003b2', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '250', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x80003b2'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,611 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,611 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '26', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x0800039e', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '248', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x800039e'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,611 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,611 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '27', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x08000370', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '231', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x8000370'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,612 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,612 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '28', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x08000380', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '238', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x8000380'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,612 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'running', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,612 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'running', 'payload': {'thread-id': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,612 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,612 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '\nProgram', 'stream': 'stdout'}
+2026-04-07 21:00:34,613 [INFO GDB.py:39 _handle_response()] [GDB]
+Program
+2026-04-07 21:00:34,613 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': ' received signal SIGINT, Interrupt.\n', 'stream': 'stdout'}
+2026-04-07 21:00:34,613 [INFO GDB.py:39 _handle_response()] [GDB] received signal SIGINT, Interrupt.
+
+2026-04-07 21:00:34,613 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '0x08000642 in UART_WaitOnFlagUntilTimeout (huart=huart@entry=0x2000003c <huart1>, Flag=Flag@entry=32, Status=Status@entry=RESET, Tickstart=Tickstart@entry=83, Timeout=Timeout@entry=4294967295) at Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c:3189\n', 'stream': 'stdout'}
+2026-04-07 21:00:34,613 [INFO GDB.py:39 _handle_response()] [GDB]0x08000642 in UART_WaitOnFlagUntilTimeout (huart=huart@entry=0x2000003c <huart1>, Flag=Flag@entry=32, Status=Status@entry=RESET, Tickstart=Tickstart@entry=83, Timeout=Timeout@entry=4294967295) at Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c:3189
+
+2026-04-07 21:00:34,613 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '3189\tin Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c\n', 'stream': 'stdout'}
+2026-04-07 21:00:34,613 [INFO GDB.py:39 _handle_response()] [GDB]3189	in Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c
+
+2026-04-07 21:00:34,614 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'stopped', 'payload': {'reason': 'signal-received', 'signal-name': 'SIGINT', 'signal-meaning': 'Interrupt', 'frame': {'addr': '0x08000642', 'func': 'UART_WaitOnFlagUntilTimeout', 'args': [{'name': 'huart', 'value': '0x2000003c <huart1>'}, {'name': 'huart@entry', 'value': '0x2000003c <huart1>'}, {'name': 'Flag', 'value': '32'}, {'name': 'Flag@entry', 'value': '32'}, {'name': 'Status', 'value': 'RESET'}, {'name': 'Status@entry', 'value': 'RESET'}, {'name': 'Tickstart', 'value': '83'}, {'name': 'Tickstart@entry', 'value': '83'}, {'name': 'Timeout', 'value': '4294967295'}, {'name': 'Timeout@entry', 'value': '4294967295'}], 'file': 'Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c', 'line': '3189', 'arch': 'armv7'}, 'thread-id': '1', 'stopped-threads': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,615 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x8000398
+2026-04-07 21:00:34,615 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x8000380
+2026-04-07 21:00:34,615 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x800037a
+2026-04-07 21:00:34,616 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x800039e
+2026-04-07 21:00:34,616 [INFO fuzzer.py:107 set_breakpoints()] Redistribute all 4 breakpoints
+2026-04-07 21:00:34,616 [INFO GDB.py:70 continue_run()] continue exec!
+2026-04-07 21:00:34,620 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:34,621 [INFO uart.py:44 send_input()] [data send]:b'aEBaVHsDE2\n'
+2026-04-07 21:00:34,622 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:34,622 [INFO uart.py:44 send_input()] [data send]:b'KqV0oG6\n'
+2026-04-07 21:00:34,624 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:34,624 [INFO GDB.py:87 interrupt()] gdb interrupt!
+2026-04-07 21:00:34,624 [INFO uart.py:44 send_input()] [data send]:b'DXuwjav4LGE2CsSQr92Nsmb1rm3\n'
+2026-04-07 21:00:34,716 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,716 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '29', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x08000398', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '246', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x8000398'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,716 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,717 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '30', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x08000380', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '238', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x8000380'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,717 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,717 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '31', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x0800037a', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '236', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x800037a'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,717 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,717 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '32', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x0800039e', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '248', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x800039e'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,718 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'running', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,718 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'running', 'payload': {'thread-id': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,718 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,718 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '\nProgram', 'stream': 'stdout'}
+2026-04-07 21:00:34,719 [INFO GDB.py:39 _handle_response()] [GDB]
+Program
+2026-04-07 21:00:34,719 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': ' received signal SIGINT, Interrupt.\n', 'stream': 'stdout'}
+2026-04-07 21:00:34,719 [INFO GDB.py:39 _handle_response()] [GDB] received signal SIGINT, Interrupt.
+
+2026-04-07 21:00:34,719 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '0x08000642 in UART_WaitOnFlagUntilTimeout (huart=huart@entry=0x2000003c <huart1>, Flag=Flag@entry=32, Status=Status@entry=RESET, Tickstart=Tickstart@entry=100, Timeout=Timeout@entry=4294967295) at Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c:3189\n', 'stream': 'stdout'}
+2026-04-07 21:00:34,719 [INFO GDB.py:39 _handle_response()] [GDB]0x08000642 in UART_WaitOnFlagUntilTimeout (huart=huart@entry=0x2000003c <huart1>, Flag=Flag@entry=32, Status=Status@entry=RESET, Tickstart=Tickstart@entry=100, Timeout=Timeout@entry=4294967295) at Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c:3189
+
+2026-04-07 21:00:34,719 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '3189\tin Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c\n', 'stream': 'stdout'}
+2026-04-07 21:00:34,719 [INFO GDB.py:39 _handle_response()] [GDB]3189	in Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c
+
+2026-04-07 21:00:34,720 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'stopped', 'payload': {'reason': 'signal-received', 'signal-name': 'SIGINT', 'signal-meaning': 'Interrupt', 'frame': {'addr': '0x08000642', 'func': 'UART_WaitOnFlagUntilTimeout', 'args': [{'name': 'huart', 'value': '0x2000003c <huart1>'}, {'name': 'huart@entry', 'value': '0x2000003c <huart1>'}, {'name': 'Flag', 'value': '32'}, {'name': 'Flag@entry', 'value': '32'}, {'name': 'Status', 'value': 'RESET'}, {'name': 'Status@entry', 'value': 'RESET'}, {'name': 'Tickstart', 'value': '100'}, {'name': 'Tickstart@entry', 'value': '100'}, {'name': 'Timeout', 'value': '4294967295'}, {'name': 'Timeout@entry', 'value': '4294967295'}], 'file': 'Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c', 'line': '3189', 'arch': 'armv7'}, 'thread-id': '1', 'stopped-threads': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,721 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x800039e
+2026-04-07 21:00:34,721 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x800036c
+2026-04-07 21:00:34,722 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x8000398
+2026-04-07 21:00:34,722 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x8000380
+2026-04-07 21:00:34,722 [INFO fuzzer.py:107 set_breakpoints()] Redistribute all 4 breakpoints
+2026-04-07 21:00:34,725 [INFO GDB.py:70 continue_run()] continue exec!
+2026-04-07 21:00:34,727 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:34,727 [INFO uart.py:44 send_input()] [data send]:b'S8pxvaPaHXd\n'
+2026-04-07 21:00:34,728 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:34,728 [INFO uart.py:44 send_input()] [data send]:b'JfxFITOz8eFPjKSoK32UhwWWFhKSc0S\n'
+2026-04-07 21:00:34,730 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:34,730 [INFO uart.py:44 send_input()] [data send]:b'Wf9r5Wa86P9lRX8e2o1PFQrM5hvT9trL\n'
+2026-04-07 21:00:34,731 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:34,731 [INFO GDB.py:87 interrupt()] gdb interrupt!
+2026-04-07 21:00:34,731 [INFO uart.py:44 send_input()] [data send]:b'mCZHRmo6zeMDBmDiaSV7hO3nMJxo\n'
+2026-04-07 21:00:34,731 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:34,732 [INFO uart.py:44 send_input()] [data send]:b'vCkBZg6hY5MWj6N2D\n'
+2026-04-07 21:00:34,826 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,826 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '33', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x0800039e', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '248', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x800039e'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,827 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,827 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '34', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x0800036c', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '232', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x800036c'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,827 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,828 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '35', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x08000398', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '246', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x8000398'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,828 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,828 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '36', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x08000380', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '238', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x8000380'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,828 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'running', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,828 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'running', 'payload': {'thread-id': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,828 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,828 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '\nProgram', 'stream': 'stdout'}
+2026-04-07 21:00:34,829 [INFO GDB.py:39 _handle_response()] [GDB]
+Program
+2026-04-07 21:00:34,829 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': ' received signal SIGINT, Interrupt.\n', 'stream': 'stdout'}
+2026-04-07 21:00:34,829 [INFO GDB.py:39 _handle_response()] [GDB] received signal SIGINT, Interrupt.
+
+2026-04-07 21:00:34,829 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '0x08000642 in UART_WaitOnFlagUntilTimeout (huart=huart@entry=0x2000003c <huart1>, Flag=Flag@entry=32, Status=Status@entry=RESET, Tickstart=Tickstart@entry=117, Timeout=Timeout@entry=4294967295) at Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c:3189\n', 'stream': 'stdout'}
+2026-04-07 21:00:34,829 [INFO GDB.py:39 _handle_response()] [GDB]0x08000642 in UART_WaitOnFlagUntilTimeout (huart=huart@entry=0x2000003c <huart1>, Flag=Flag@entry=32, Status=Status@entry=RESET, Tickstart=Tickstart@entry=117, Timeout=Timeout@entry=4294967295) at Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c:3189
+
+2026-04-07 21:00:34,829 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '3189\tin Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c\n', 'stream': 'stdout'}
+2026-04-07 21:00:34,829 [INFO GDB.py:39 _handle_response()] [GDB]3189	in Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c
+
+2026-04-07 21:00:34,829 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'stopped', 'payload': {'reason': 'signal-received', 'signal-name': 'SIGINT', 'signal-meaning': 'Interrupt', 'frame': {'addr': '0x08000642', 'func': 'UART_WaitOnFlagUntilTimeout', 'args': [{'name': 'huart', 'value': '0x2000003c <huart1>'}, {'name': 'huart@entry', 'value': '0x2000003c <huart1>'}, {'name': 'Flag', 'value': '32'}, {'name': 'Flag@entry', 'value': '32'}, {'name': 'Status', 'value': 'RESET'}, {'name': 'Status@entry', 'value': 'RESET'}, {'name': 'Tickstart', 'value': '117'}, {'name': 'Tickstart@entry', 'value': '117'}, {'name': 'Timeout', 'value': '4294967295'}, {'name': 'Timeout@entry', 'value': '4294967295'}], 'file': 'Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c', 'line': '3189', 'arch': 'armv7'}, 'thread-id': '1', 'stopped-threads': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,831 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x800037a
+2026-04-07 21:00:34,831 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x8000386
+2026-04-07 21:00:34,831 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x8000378
+2026-04-07 21:00:34,832 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x80003a4
+2026-04-07 21:00:34,832 [INFO fuzzer.py:107 set_breakpoints()] Redistribute all 4 breakpoints
+2026-04-07 21:00:34,834 [INFO GDB.py:70 continue_run()] continue exec!
+2026-04-07 21:00:34,837 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:34,838 [INFO uart.py:44 send_input()] [data send]:b'y\n'
+2026-04-07 21:00:34,839 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:34,840 [INFO uart.py:44 send_input()] [data send]:b'dc0ukg\n'
+2026-04-07 21:00:34,841 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:34,841 [INFO GDB.py:87 interrupt()] gdb interrupt!
+2026-04-07 21:00:34,841 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:34,841 [INFO uart.py:44 send_input()] [data send]:b'IqwnsDzLMEQoB2oHyZS852\n'
+2026-04-07 21:00:34,842 [INFO uart.py:44 send_input()] [data send]:b'KqnSv6k5FUoxdCB\n'
+2026-04-07 21:00:34,936 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,936 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '37', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x0800037a', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '236', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x800037a'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,936 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,937 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '38', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x08000386', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '240', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x8000386'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,937 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,937 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '39', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x08000378', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '259', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x8000378'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,937 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,937 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '40', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x080003a4', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '250', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x80003a4'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,937 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'running', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,937 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'running', 'payload': {'thread-id': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,938 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,938 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '\nProgram', 'stream': 'stdout'}
+2026-04-07 21:00:34,938 [INFO GDB.py:39 _handle_response()] [GDB]
+Program
+2026-04-07 21:00:34,938 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': ' received signal SIGINT, Interrupt.\n', 'stream': 'stdout'}
+2026-04-07 21:00:34,938 [INFO GDB.py:39 _handle_response()] [GDB] received signal SIGINT, Interrupt.
+
+2026-04-07 21:00:34,938 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '0x08000642 in UART_WaitOnFlagUntilTimeout (huart=huart@entry=0x2000003c <huart1>, Flag=Flag@entry=32, Status=Status@entry=RESET, Tickstart=Tickstart@entry=135, Timeout=Timeout@entry=4294967295) at Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c:3189\n', 'stream': 'stdout'}
+2026-04-07 21:00:34,938 [INFO GDB.py:39 _handle_response()] [GDB]0x08000642 in UART_WaitOnFlagUntilTimeout (huart=huart@entry=0x2000003c <huart1>, Flag=Flag@entry=32, Status=Status@entry=RESET, Tickstart=Tickstart@entry=135, Timeout=Timeout@entry=4294967295) at Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c:3189
+
+2026-04-07 21:00:34,938 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '3189\tin Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c\n', 'stream': 'stdout'}
+2026-04-07 21:00:34,938 [INFO GDB.py:39 _handle_response()] [GDB]3189	in Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c
+
+2026-04-07 21:00:34,939 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'stopped', 'payload': {'reason': 'signal-received', 'signal-name': 'SIGINT', 'signal-meaning': 'Interrupt', 'frame': {'addr': '0x08000642', 'func': 'UART_WaitOnFlagUntilTimeout', 'args': [{'name': 'huart', 'value': '0x2000003c <huart1>'}, {'name': 'huart@entry', 'value': '0x2000003c <huart1>'}, {'name': 'Flag', 'value': '32'}, {'name': 'Flag@entry', 'value': '32'}, {'name': 'Status', 'value': 'RESET'}, {'name': 'Status@entry', 'value': 'RESET'}, {'name': 'Tickstart', 'value': '135'}, {'name': 'Tickstart@entry', 'value': '135'}, {'name': 'Timeout', 'value': '4294967295'}, {'name': 'Timeout@entry', 'value': '4294967295'}], 'file': 'Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c', 'line': '3189', 'arch': 'armv7'}, 'thread-id': '1', 'stopped-threads': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:34,939 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x8000392
+2026-04-07 21:00:34,939 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x8000386
+2026-04-07 21:00:34,940 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x80003b4
+2026-04-07 21:00:34,940 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x800038c
+2026-04-07 21:00:34,940 [INFO fuzzer.py:107 set_breakpoints()] Redistribute all 4 breakpoints
+2026-04-07 21:00:34,940 [INFO GDB.py:70 continue_run()] continue exec!
+2026-04-07 21:00:34,945 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:34,946 [INFO uart.py:44 send_input()] [data send]:b'ln\n'
+2026-04-07 21:00:34,947 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:34,947 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:34,947 [INFO uart.py:44 send_input()] [data send]:b'I\n'
+2026-04-07 21:00:34,948 [INFO GDB.py:87 interrupt()] gdb interrupt!
+2026-04-07 21:00:34,948 [INFO uart.py:44 send_input()] [data send]:b'Zs8adUA1idFQjc1pl21DH\n'
+2026-04-07 21:00:35,044 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,045 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '41', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x08000392', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '244', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x8000392'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,045 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,045 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '42', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x08000386', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '240', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x8000386'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,045 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,045 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '43', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x080003b4', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '250', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x80003b4'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,045 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,046 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '44', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x0800038c', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '242', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x800038c'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,046 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'running', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,046 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'running', 'payload': {'thread-id': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,046 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,046 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '\nProgram', 'stream': 'stdout'}
+2026-04-07 21:00:35,046 [INFO GDB.py:39 _handle_response()] [GDB]
+Program
+2026-04-07 21:00:35,046 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': ' received signal SIGINT, Interrupt.\n', 'stream': 'stdout'}
+2026-04-07 21:00:35,046 [INFO GDB.py:39 _handle_response()] [GDB] received signal SIGINT, Interrupt.
+
+2026-04-07 21:00:35,047 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '0x08000642 in UART_WaitOnFlagUntilTimeout (huart=huart@entry=0x2000003c <huart1>, Flag=Flag@entry=32, Status=Status@entry=RESET, Tickstart=Tickstart@entry=148, Timeout=Timeout@entry=4294967295) at Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c:3189\n', 'stream': 'stdout'}
+2026-04-07 21:00:35,047 [INFO GDB.py:39 _handle_response()] [GDB]0x08000642 in UART_WaitOnFlagUntilTimeout (huart=huart@entry=0x2000003c <huart1>, Flag=Flag@entry=32, Status=Status@entry=RESET, Tickstart=Tickstart@entry=148, Timeout=Timeout@entry=4294967295) at Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c:3189
+
+2026-04-07 21:00:35,047 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '3189\tin Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c\n', 'stream': 'stdout'}
+2026-04-07 21:00:35,047 [INFO GDB.py:39 _handle_response()] [GDB]3189	in Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c
+
+2026-04-07 21:00:35,047 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'stopped', 'payload': {'reason': 'signal-received', 'signal-name': 'SIGINT', 'signal-meaning': 'Interrupt', 'frame': {'addr': '0x08000642', 'func': 'UART_WaitOnFlagUntilTimeout', 'args': [{'name': 'huart', 'value': '0x2000003c <huart1>'}, {'name': 'huart@entry', 'value': '0x2000003c <huart1>'}, {'name': 'Flag', 'value': '32'}, {'name': 'Flag@entry', 'value': '32'}, {'name': 'Status', 'value': 'RESET'}, {'name': 'Status@entry', 'value': 'RESET'}, {'name': 'Tickstart', 'value': '148'}, {'name': 'Tickstart@entry', 'value': '148'}, {'name': 'Timeout', 'value': '4294967295'}, {'name': 'Timeout@entry', 'value': '4294967295'}], 'file': 'Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c', 'line': '3189', 'arch': 'armv7'}, 'thread-id': '1', 'stopped-threads': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,049 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x8000386
+2026-04-07 21:00:35,049 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x8000398
+2026-04-07 21:00:35,049 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x800037a
+2026-04-07 21:00:35,050 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x800036c
+2026-04-07 21:00:35,050 [INFO fuzzer.py:107 set_breakpoints()] Redistribute all 4 breakpoints
+2026-04-07 21:00:35,050 [INFO GDB.py:70 continue_run()] continue exec!
+2026-04-07 21:00:35,149 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,149 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '45', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x08000386', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '240', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x8000386'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,149 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,149 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '46', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x08000398', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '246', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x8000398'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,150 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,150 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '47', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x0800037a', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '236', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x800037a'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,150 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,150 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '48', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x0800036c', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '232', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x800036c'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,150 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'running', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,150 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'running', 'payload': {'thread-id': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,150 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'breakpoint-modified', 'payload': {'bkpt': {'number': '48', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x0800036c', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '232', 'thread-groups': ['i1'], 'times': '1', 'original-location': '*0x800036c'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,150 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '\n', 'stream': 'stdout'}
+2026-04-07 21:00:35,150 [INFO GDB.py:39 _handle_response()] [GDB]
+
+2026-04-07 21:00:35,150 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': 'Breakpoint 48, deadbeef (buf=buf@entry=0x20000028 <buffer> "JjHzrtzTXLfzihjp", size=16) at Core/Src/main.c:232\n', 'stream': 'stdout'}
+2026-04-07 21:00:35,150 [INFO GDB.py:39 _handle_response()] [GDB]Breakpoint 48, deadbeef (buf=buf@entry=0x20000028 <buffer> "JjHzrtzTXLfzihjp", size=16) at Core/Src/main.c:232
+
+2026-04-07 21:00:35,150 [INFO GDB.py:28 _listener_loop()] {'type': 'log', 'message': None, 'payload': '⚠️ warning: 232\tCore/Src/main.c: No such file or directory\n', 'stream': 'stdout'}
+2026-04-07 21:00:35,150 [INFO GDB.py:39 _handle_response()] [GDB]⚠️ warning: 232	Core/Src/main.c: No such file or directory
+
+2026-04-07 21:00:35,150 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'stopped', 'payload': {'reason': 'breakpoint-hit', 'disp': 'keep', 'bkptno': '48', 'frame': {'addr': '0x0800036c', 'func': 'deadbeef', 'args': [{'name': 'buf', 'value': '0x20000028 <buffer> "JjHzrtzTXLfzihjp"'}, {'name': 'buf@entry', 'value': '0x20000028 <buffer> "JjHzrtzTXLfzihjp"'}, {'name': 'size', 'value': '16'}], 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '232', 'arch': 'armv7'}, 'thread-id': '1', 'stopped-threads': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,150 [INFO fuzzer.py:78 start_fuzz()] Breakpoint hit at 0x0800036c
+2026-04-07 21:00:35,150 [INFO GDB.py:70 continue_run()] continue exec!
+2026-04-07 21:00:35,151 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:35,152 [INFO uart.py:44 send_input()] [data send]:b'qsXzfF3I2ATn6ROdRF3ngm4xN\n'
+2026-04-07 21:00:35,255 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'running', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,256 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'running', 'payload': {'thread-id': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,256 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'breakpoint-modified', 'payload': {'bkpt': {'number': '48', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x0800036c', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '232', 'thread-groups': ['i1'], 'times': '2', 'original-location': '*0x800036c'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,256 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '\n', 'stream': 'stdout'}
+2026-04-07 21:00:35,256 [INFO GDB.py:39 _handle_response()] [GDB]
+
+2026-04-07 21:00:35,256 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': 'Breakpoint 48, deadbeef (buf=buf@entry=0x20000028 <buffer> "Ja4GLQQpjSkrD\\njp", size=14) at Core/Src/main.c:232\n', 'stream': 'stdout'}
+2026-04-07 21:00:35,256 [INFO GDB.py:39 _handle_response()] [GDB]Breakpoint 48, deadbeef (buf=buf@entry=0x20000028 <buffer> "Ja4GLQQpjSkrD\njp", size=14) at Core/Src/main.c:232
+
+2026-04-07 21:00:35,256 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '232\tin Core/Src/main.c\n', 'stream': 'stdout'}
+2026-04-07 21:00:35,256 [INFO GDB.py:39 _handle_response()] [GDB]232	in Core/Src/main.c
+
+2026-04-07 21:00:35,256 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'stopped', 'payload': {'reason': 'breakpoint-hit', 'disp': 'keep', 'bkptno': '48', 'frame': {'addr': '0x0800036c', 'func': 'deadbeef', 'args': [{'name': 'buf', 'value': '0x20000028 <buffer> "Ja4GLQQpjSkrD\\njp"'}, {'name': 'buf@entry', 'value': '0x20000028 <buffer> "Ja4GLQQpjSkrD\\njp"'}, {'name': 'size', 'value': '14'}], 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '232', 'arch': 'armv7'}, 'thread-id': '1', 'stopped-threads': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,257 [INFO fuzzer.py:78 start_fuzz()] Breakpoint hit at 0x0800036c
+2026-04-07 21:00:35,257 [INFO GDB.py:70 continue_run()] continue exec!
+2026-04-07 21:00:35,258 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:35,258 [INFO uart.py:44 send_input()] [data send]:b'JPCuNQBsfz5Rxj2DW\n'
+2026-04-07 21:00:35,362 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'running', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,362 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'running', 'payload': {'thread-id': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,362 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'breakpoint-modified', 'payload': {'bkpt': {'number': '48', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x0800036c', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '232', 'thread-groups': ['i1'], 'times': '3', 'original-location': '*0x800036c'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,363 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '\n', 'stream': 'stdout'}
+2026-04-07 21:00:35,363 [INFO GDB.py:39 _handle_response()] [GDB]
+
+2026-04-07 21:00:35,363 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': 'Breakpoint 48, deadbeef (buf=buf@entry=0x20000028 <buffer> "1YdGAkOKgoKGOycs", size=16) at Core/Src/main.c:232\n', 'stream': 'stdout'}
+2026-04-07 21:00:35,363 [INFO GDB.py:39 _handle_response()] [GDB]Breakpoint 48, deadbeef (buf=buf@entry=0x20000028 <buffer> "1YdGAkOKgoKGOycs", size=16) at Core/Src/main.c:232
+
+2026-04-07 21:00:35,363 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '232\tin Core/Src/main.c\n', 'stream': 'stdout'}
+2026-04-07 21:00:35,363 [INFO GDB.py:39 _handle_response()] [GDB]232	in Core/Src/main.c
+
+2026-04-07 21:00:35,364 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'stopped', 'payload': {'reason': 'breakpoint-hit', 'disp': 'keep', 'bkptno': '48', 'frame': {'addr': '0x0800036c', 'func': 'deadbeef', 'args': [{'name': 'buf', 'value': '0x20000028 <buffer> "1YdGAkOKgoKGOycs"'}, {'name': 'buf@entry', 'value': '0x20000028 <buffer> "1YdGAkOKgoKGOycs"'}, {'name': 'size', 'value': '16'}], 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '232', 'arch': 'armv7'}, 'thread-id': '1', 'stopped-threads': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,364 [INFO fuzzer.py:78 start_fuzz()] Breakpoint hit at 0x0800036c
+2026-04-07 21:00:35,364 [INFO GDB.py:70 continue_run()] continue exec!
+2026-04-07 21:00:35,366 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:35,366 [INFO uart.py:44 send_input()] [data send]:b'QUWGINn\n'
+2026-04-07 21:00:35,466 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'running', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,466 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'running', 'payload': {'thread-id': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,466 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'breakpoint-modified', 'payload': {'bkpt': {'number': '48', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x0800036c', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '232', 'thread-groups': ['i1'], 'times': '4', 'original-location': '*0x800036c'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,467 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '\n', 'stream': 'stdout'}
+2026-04-07 21:00:35,467 [INFO GDB.py:39 _handle_response()] [GDB]
+
+2026-04-07 21:00:35,467 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': 'Breakpoint 48, deadbeef (buf=buf@entry=0x20000028 <buffer> "CgGyjpKTU7D\\nOycs", size=12) at Core/Src/main.c:232\n', 'stream': 'stdout'}
+2026-04-07 21:00:35,467 [INFO GDB.py:39 _handle_response()] [GDB]Breakpoint 48, deadbeef (buf=buf@entry=0x20000028 <buffer> "CgGyjpKTU7D\nOycs", size=12) at Core/Src/main.c:232
+
+2026-04-07 21:00:35,468 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '232\tin Core/Src/main.c\n', 'stream': 'stdout'}
+2026-04-07 21:00:35,468 [INFO GDB.py:39 _handle_response()] [GDB]232	in Core/Src/main.c
+
+2026-04-07 21:00:35,468 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'stopped', 'payload': {'reason': 'breakpoint-hit', 'disp': 'keep', 'bkptno': '48', 'frame': {'addr': '0x0800036c', 'func': 'deadbeef', 'args': [{'name': 'buf', 'value': '0x20000028 <buffer> "CgGyjpKTU7D\\nOycs"'}, {'name': 'buf@entry', 'value': '0x20000028 <buffer> "CgGyjpKTU7D\\nOycs"'}, {'name': 'size', 'value': '12'}], 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '232', 'arch': 'armv7'}, 'thread-id': '1', 'stopped-threads': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,468 [INFO fuzzer.py:78 start_fuzz()] Breakpoint hit at 0x0800036c
+2026-04-07 21:00:35,469 [INFO GDB.py:70 continue_run()] continue exec!
+2026-04-07 21:00:35,471 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:35,472 [INFO GDB.py:87 interrupt()] gdb interrupt!
+2026-04-07 21:00:35,472 [INFO uart.py:44 send_input()] [data send]:b'ABAQEH3UheMJvnlRiOTTZggL5OFzWEkq\n'
+2026-04-07 21:00:35,573 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'running', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,574 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'running', 'payload': {'thread-id': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,574 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,574 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '\nProgram', 'stream': 'stdout'}
+2026-04-07 21:00:35,574 [INFO GDB.py:39 _handle_response()] [GDB]
+Program
+2026-04-07 21:00:35,574 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': ' received signal SIGINT, Interrupt.\n', 'stream': 'stdout'}
+2026-04-07 21:00:35,574 [INFO GDB.py:39 _handle_response()] [GDB] received signal SIGINT, Interrupt.
+
+2026-04-07 21:00:35,679 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': 'SysTick_Handler () at Core/Src/stm32f1xx_it.c:184\n', 'stream': 'stdout'}
+2026-04-07 21:00:35,679 [INFO GDB.py:39 _handle_response()] [GDB]SysTick_Handler () at Core/Src/stm32f1xx_it.c:184
+
+2026-04-07 21:00:35,680 [INFO GDB.py:28 _listener_loop()] {'type': 'log', 'message': None, 'payload': '⚠️ warning: 184\tCore/Src/stm32f1xx_it.c: No such file or directory\n', 'stream': 'stdout'}
+2026-04-07 21:00:35,680 [INFO GDB.py:39 _handle_response()] [GDB]⚠️ warning: 184	Core/Src/stm32f1xx_it.c: No such file or directory
+
+2026-04-07 21:00:35,680 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'stopped', 'payload': {'reason': 'signal-received', 'signal-name': 'SIGINT', 'signal-meaning': 'Interrupt', 'frame': {'addr': '0x08000430', 'func': 'SysTick_Handler', 'args': [], 'file': 'Core/Src/stm32f1xx_it.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/stm32f1xx_it.c', 'line': '184', 'arch': 'armv7'}, 'thread-id': '1', 'stopped-threads': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,680 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x8000370
+2026-04-07 21:00:35,681 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x800038c
+2026-04-07 21:00:35,681 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x800039e
+2026-04-07 21:00:35,681 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x800037a
+2026-04-07 21:00:35,681 [INFO fuzzer.py:107 set_breakpoints()] Redistribute all 4 breakpoints
+2026-04-07 21:00:35,681 [INFO GDB.py:70 continue_run()] continue exec!
+2026-04-07 21:00:35,685 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:35,685 [INFO uart.py:44 send_input()] [data send]:b's\n'
+2026-04-07 21:00:35,686 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:35,686 [INFO uart.py:44 send_input()] [data send]:b'Q1UWzFjBZsIYV5VQEUMHE\n'
+2026-04-07 21:00:35,687 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:35,688 [INFO uart.py:44 send_input()] [data send]:b'gHBArwGloKtewtyu67urErmBXP1xd\n'
+2026-04-07 21:00:35,688 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:35,688 [INFO GDB.py:87 interrupt()] gdb interrupt!
+2026-04-07 21:00:35,689 [INFO uart.py:44 send_input()] [data send]:b'JHN9Kx4S33VnsOoz3j3fnWT7JX\n'
+2026-04-07 21:00:35,781 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,782 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '49', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x08000370', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '231', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x8000370'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,782 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,782 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '50', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x0800038c', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '242', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x800038c'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,782 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,782 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '51', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x0800039e', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '248', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x800039e'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,782 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,782 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '52', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x0800037a', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '236', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x800037a'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,782 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'running', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,782 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'running', 'payload': {'thread-id': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,782 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,782 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '\nProgram', 'stream': 'stdout'}
+2026-04-07 21:00:35,782 [INFO GDB.py:39 _handle_response()] [GDB]
+Program
+2026-04-07 21:00:35,782 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': ' received signal SIGINT, Interrupt.\n', 'stream': 'stdout'}
+2026-04-07 21:00:35,782 [INFO GDB.py:39 _handle_response()] [GDB] received signal SIGINT, Interrupt.
+
+2026-04-07 21:00:35,782 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '0x08000642 in UART_WaitOnFlagUntilTimeout (huart=huart@entry=0x2000003c <huart1>, Flag=Flag@entry=32, Status=Status@entry=RESET, Tickstart=Tickstart@entry=177, Timeout=Timeout@entry=4294967295) at Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c:3189\n', 'stream': 'stdout'}
+2026-04-07 21:00:35,782 [INFO GDB.py:39 _handle_response()] [GDB]0x08000642 in UART_WaitOnFlagUntilTimeout (huart=huart@entry=0x2000003c <huart1>, Flag=Flag@entry=32, Status=Status@entry=RESET, Tickstart=Tickstart@entry=177, Timeout=Timeout@entry=4294967295) at Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c:3189
+
+2026-04-07 21:00:35,782 [INFO GDB.py:28 _listener_loop()] {'type': 'log', 'message': None, 'payload': '⚠️ warning: 3189\tDrivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c: No such file or directory\n', 'stream': 'stdout'}
+2026-04-07 21:00:35,782 [INFO GDB.py:39 _handle_response()] [GDB]⚠️ warning: 3189	Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c: No such file or directory
+
+2026-04-07 21:00:35,783 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'stopped', 'payload': {'reason': 'signal-received', 'signal-name': 'SIGINT', 'signal-meaning': 'Interrupt', 'frame': {'addr': '0x08000642', 'func': 'UART_WaitOnFlagUntilTimeout', 'args': [{'name': 'huart', 'value': '0x2000003c <huart1>'}, {'name': 'huart@entry', 'value': '0x2000003c <huart1>'}, {'name': 'Flag', 'value': '32'}, {'name': 'Flag@entry', 'value': '32'}, {'name': 'Status', 'value': 'RESET'}, {'name': 'Status@entry', 'value': 'RESET'}, {'name': 'Tickstart', 'value': '177'}, {'name': 'Tickstart@entry', 'value': '177'}, {'name': 'Timeout', 'value': '4294967295'}, {'name': 'Timeout@entry', 'value': '4294967295'}], 'file': 'Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c', 'line': '3189', 'arch': 'armv7'}, 'thread-id': '1', 'stopped-threads': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,783 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x80003a4
+2026-04-07 21:00:35,783 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x8000386
+2026-04-07 21:00:35,783 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x8000378
+2026-04-07 21:00:35,783 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x800038c
+2026-04-07 21:00:35,783 [INFO fuzzer.py:107 set_breakpoints()] Redistribute all 4 breakpoints
+2026-04-07 21:00:35,783 [INFO GDB.py:70 continue_run()] continue exec!
+2026-04-07 21:00:35,785 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:35,785 [INFO uart.py:44 send_input()] [data send]:b'tKyw6I53hly\n'
+2026-04-07 21:00:35,785 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:35,785 [INFO uart.py:44 send_input()] [data send]:b'hVIEQ9YoxtB\n'
+2026-04-07 21:00:35,786 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:35,786 [INFO uart.py:44 send_input()] [data send]:b'xh\n'
+2026-04-07 21:00:35,787 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:35,787 [INFO GDB.py:87 interrupt()] gdb interrupt!
+2026-04-07 21:00:35,787 [INFO uart.py:44 send_input()] [data send]:b'a9y0WOpLLbV7s0oADRcqsR\n'
+2026-04-07 21:00:35,888 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,888 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '53', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x080003a4', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '250', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x80003a4'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,888 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,888 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '54', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x08000386', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '240', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x8000386'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,888 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,888 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '55', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x08000378', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '259', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x8000378'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,888 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,888 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '56', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x0800038c', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '242', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x800038c'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,888 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'running', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,888 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'running', 'payload': {'thread-id': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,888 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,888 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '\nProgram', 'stream': 'stdout'}
+2026-04-07 21:00:35,888 [INFO GDB.py:39 _handle_response()] [GDB]
+Program
+2026-04-07 21:00:35,888 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': ' received signal SIGINT, Interrupt.\n', 'stream': 'stdout'}
+2026-04-07 21:00:35,888 [INFO GDB.py:39 _handle_response()] [GDB] received signal SIGINT, Interrupt.
+
+2026-04-07 21:00:35,994 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': 'SysTick_Handler () at Core/Src/stm32f1xx_it.c:184\n', 'stream': 'stdout'}
+2026-04-07 21:00:35,994 [INFO GDB.py:39 _handle_response()] [GDB]SysTick_Handler () at Core/Src/stm32f1xx_it.c:184
+
+2026-04-07 21:00:35,994 [INFO GDB.py:28 _listener_loop()] {'type': 'log', 'message': None, 'payload': '⚠️ warning: 184\tCore/Src/stm32f1xx_it.c: No such file or directory\n', 'stream': 'stdout'}
+2026-04-07 21:00:35,994 [INFO GDB.py:39 _handle_response()] [GDB]⚠️ warning: 184	Core/Src/stm32f1xx_it.c: No such file or directory
+
+2026-04-07 21:00:35,994 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'stopped', 'payload': {'reason': 'signal-received', 'signal-name': 'SIGINT', 'signal-meaning': 'Interrupt', 'frame': {'addr': '0x08000430', 'func': 'SysTick_Handler', 'args': [], 'file': 'Core/Src/stm32f1xx_it.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/stm32f1xx_it.c', 'line': '184', 'arch': 'armv7'}, 'thread-id': '1', 'stopped-threads': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:35,995 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x80003a4
+2026-04-07 21:00:35,995 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x8000392
+2026-04-07 21:00:35,996 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x800036c
+2026-04-07 21:00:35,996 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x8000398
+2026-04-07 21:00:35,996 [INFO fuzzer.py:107 set_breakpoints()] Redistribute all 4 breakpoints
+2026-04-07 21:00:35,996 [INFO GDB.py:70 continue_run()] continue exec!
+2026-04-07 21:00:36,000 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:36,001 [INFO uart.py:44 send_input()] [data send]:b'EVstuYAcmsuga7LgPeFPhVduse3DOLck\n'
+2026-04-07 21:00:36,003 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:36,004 [INFO uart.py:44 send_input()] [data send]:b'OSkEChWykJb5mH\n'
+2026-04-07 21:00:36,005 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:36,005 [INFO uart.py:44 send_input()] [data send]:b'1d5LZYe4CjpjyMzKajp9meOJ\n'
+2026-04-07 21:00:36,005 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:36,005 [INFO GDB.py:87 interrupt()] gdb interrupt!
+2026-04-07 21:00:36,005 [INFO uart.py:44 send_input()] [data send]:b'5JHjvB3EnqH\n'
+2026-04-07 21:00:36,100 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,100 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '57', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x080003a4', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '250', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x80003a4'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,100 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,100 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '58', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x08000392', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '244', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x8000392'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,100 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,100 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '59', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x0800036c', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '232', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x800036c'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,100 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,100 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '60', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x08000398', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '246', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x8000398'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,100 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'running', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,100 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'running', 'payload': {'thread-id': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,100 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,100 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '\nProgram', 'stream': 'stdout'}
+2026-04-07 21:00:36,101 [INFO GDB.py:39 _handle_response()] [GDB]
+Program
+2026-04-07 21:00:36,101 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': ' received signal SIGINT, Interrupt.\n', 'stream': 'stdout'}
+2026-04-07 21:00:36,101 [INFO GDB.py:39 _handle_response()] [GDB] received signal SIGINT, Interrupt.
+
+2026-04-07 21:00:36,206 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '0x08000642 in UART_WaitOnFlagUntilTimeout (huart=huart@entry=0x2000003c <huart1>, Flag=Flag@entry=32, Status=Status@entry=RESET, Tickstart=Tickstart@entry=205, Timeout=Timeout@entry=4294967295) at Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c:3189\n', 'stream': 'stdout'}
+2026-04-07 21:00:36,206 [INFO GDB.py:39 _handle_response()] [GDB]0x08000642 in UART_WaitOnFlagUntilTimeout (huart=huart@entry=0x2000003c <huart1>, Flag=Flag@entry=32, Status=Status@entry=RESET, Tickstart=Tickstart@entry=205, Timeout=Timeout@entry=4294967295) at Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c:3189
+
+2026-04-07 21:00:36,206 [INFO GDB.py:28 _listener_loop()] {'type': 'log', 'message': None, 'payload': '⚠️ warning: 3189\tDrivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c: No such file or directory\n', 'stream': 'stdout'}
+2026-04-07 21:00:36,206 [INFO GDB.py:39 _handle_response()] [GDB]⚠️ warning: 3189	Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c: No such file or directory
+
+2026-04-07 21:00:36,207 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'stopped', 'payload': {'reason': 'signal-received', 'signal-name': 'SIGINT', 'signal-meaning': 'Interrupt', 'frame': {'addr': '0x08000642', 'func': 'UART_WaitOnFlagUntilTimeout', 'args': [{'name': 'huart', 'value': '0x2000003c <huart1>'}, {'name': 'huart@entry', 'value': '0x2000003c <huart1>'}, {'name': 'Flag', 'value': '32'}, {'name': 'Flag@entry', 'value': '32'}, {'name': 'Status', 'value': 'RESET'}, {'name': 'Status@entry', 'value': 'RESET'}, {'name': 'Tickstart', 'value': '205'}, {'name': 'Tickstart@entry', 'value': '205'}, {'name': 'Timeout', 'value': '4294967295'}, {'name': 'Timeout@entry', 'value': '4294967295'}], 'file': 'Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c', 'line': '3189', 'arch': 'armv7'}, 'thread-id': '1', 'stopped-threads': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,208 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x800037a
+2026-04-07 21:00:36,208 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x8000380
+2026-04-07 21:00:36,209 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x800036c
+2026-04-07 21:00:36,209 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x80003b2
+2026-04-07 21:00:36,209 [INFO fuzzer.py:107 set_breakpoints()] Redistribute all 4 breakpoints
+2026-04-07 21:00:36,209 [INFO GDB.py:70 continue_run()] continue exec!
+2026-04-07 21:00:36,212 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:36,213 [INFO uart.py:44 send_input()] [data send]:b'x\n'
+2026-04-07 21:00:36,214 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:36,214 [INFO uart.py:44 send_input()] [data send]:b'cTgqbBg2Vc9cpSk4K5N\n'
+2026-04-07 21:00:36,215 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:36,215 [INFO uart.py:44 send_input()] [data send]:b'ZFU8BijD\n'
+2026-04-07 21:00:36,215 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:36,216 [INFO GDB.py:87 interrupt()] gdb interrupt!
+2026-04-07 21:00:36,216 [INFO uart.py:44 send_input()] [data send]:b'LmQqkrnHoIV4pS\n'
+2026-04-07 21:00:36,216 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:36,216 [INFO uart.py:44 send_input()] [data send]:b'JnlLCWEz1pEJfyt\n'
+2026-04-07 21:00:36,313 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,313 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '61', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x0800037a', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '236', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x800037a'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,313 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,313 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '62', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x08000380', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '238', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x8000380'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,314 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,314 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '63', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x0800036c', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '232', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x800036c'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,314 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,314 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '64', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x080003b2', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '250', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x80003b2'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,314 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'running', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,314 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'running', 'payload': {'thread-id': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,314 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,314 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '\nProgram', 'stream': 'stdout'}
+2026-04-07 21:00:36,314 [INFO GDB.py:39 _handle_response()] [GDB]
+Program
+2026-04-07 21:00:36,314 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': ' received signal SIGINT, Interrupt.\n', 'stream': 'stdout'}
+2026-04-07 21:00:36,314 [INFO GDB.py:39 _handle_response()] [GDB] received signal SIGINT, Interrupt.
+
+2026-04-07 21:00:36,419 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': 'SysTick_Handler () at Core/Src/stm32f1xx_it.c:184\n', 'stream': 'stdout'}
+2026-04-07 21:00:36,419 [INFO GDB.py:39 _handle_response()] [GDB]SysTick_Handler () at Core/Src/stm32f1xx_it.c:184
+
+2026-04-07 21:00:36,420 [INFO GDB.py:28 _listener_loop()] {'type': 'log', 'message': None, 'payload': '⚠️ warning: 184\tCore/Src/stm32f1xx_it.c: No such file or directory\n', 'stream': 'stdout'}
+2026-04-07 21:00:36,420 [INFO GDB.py:39 _handle_response()] [GDB]⚠️ warning: 184	Core/Src/stm32f1xx_it.c: No such file or directory
+
+2026-04-07 21:00:36,420 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'stopped', 'payload': {'reason': 'signal-received', 'signal-name': 'SIGINT', 'signal-meaning': 'Interrupt', 'frame': {'addr': '0x08000430', 'func': 'SysTick_Handler', 'args': [], 'file': 'Core/Src/stm32f1xx_it.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/stm32f1xx_it.c', 'line': '184', 'arch': 'armv7'}, 'thread-id': '1', 'stopped-threads': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,420 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x80003a4
+2026-04-07 21:00:36,420 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x8000378
+2026-04-07 21:00:36,420 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x800036c
+2026-04-07 21:00:36,421 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x8000380
+2026-04-07 21:00:36,423 [INFO fuzzer.py:107 set_breakpoints()] Redistribute all 4 breakpoints
+2026-04-07 21:00:36,423 [INFO GDB.py:70 continue_run()] continue exec!
+2026-04-07 21:00:36,426 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:36,427 [INFO uart.py:44 send_input()] [data send]:b'q0\n'
+2026-04-07 21:00:36,428 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:36,428 [INFO uart.py:44 send_input()] [data send]:b'dUk3ntx3hzIxx3sa1o\n'
+2026-04-07 21:00:36,428 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:36,429 [INFO GDB.py:87 interrupt()] gdb interrupt!
+2026-04-07 21:00:36,429 [INFO uart.py:44 send_input()] [data send]:b'LfybtoUYtaeVFjbkOIajMgIQOfFdFp\n'
+2026-04-07 21:00:36,525 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,525 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '65', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x080003a4', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '250', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x80003a4'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,525 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,525 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '66', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x08000378', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '259', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x8000378'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,525 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,526 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '67', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x0800036c', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '232', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x800036c'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,526 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,526 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '68', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x08000380', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '238', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x8000380'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,526 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'running', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,526 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'running', 'payload': {'thread-id': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,526 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,526 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '\nProgram', 'stream': 'stdout'}
+2026-04-07 21:00:36,526 [INFO GDB.py:39 _handle_response()] [GDB]
+Program
+2026-04-07 21:00:36,526 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': ' received signal SIGINT, Interrupt.\n', 'stream': 'stdout'}
+2026-04-07 21:00:36,526 [INFO GDB.py:39 _handle_response()] [GDB] received signal SIGINT, Interrupt.
+
+2026-04-07 21:00:36,631 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '0x08000642 in UART_WaitOnFlagUntilTimeout (huart=huart@entry=0x2000003c <huart1>, Flag=Flag@entry=32, Status=Status@entry=RESET, Tickstart=Tickstart@entry=231, Timeout=Timeout@entry=4294967295) at Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c:3189\n', 'stream': 'stdout'}
+2026-04-07 21:00:36,631 [INFO GDB.py:39 _handle_response()] [GDB]0x08000642 in UART_WaitOnFlagUntilTimeout (huart=huart@entry=0x2000003c <huart1>, Flag=Flag@entry=32, Status=Status@entry=RESET, Tickstart=Tickstart@entry=231, Timeout=Timeout@entry=4294967295) at Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c:3189
+
+2026-04-07 21:00:36,632 [INFO GDB.py:28 _listener_loop()] {'type': 'log', 'message': None, 'payload': '⚠️ warning: 3189\tDrivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c: No such file or directory\n', 'stream': 'stdout'}
+2026-04-07 21:00:36,632 [INFO GDB.py:39 _handle_response()] [GDB]⚠️ warning: 3189	Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c: No such file or directory
+
+2026-04-07 21:00:36,632 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'stopped', 'payload': {'reason': 'signal-received', 'signal-name': 'SIGINT', 'signal-meaning': 'Interrupt', 'frame': {'addr': '0x08000642', 'func': 'UART_WaitOnFlagUntilTimeout', 'args': [{'name': 'huart', 'value': '0x2000003c <huart1>'}, {'name': 'huart@entry', 'value': '0x2000003c <huart1>'}, {'name': 'Flag', 'value': '32'}, {'name': 'Flag@entry', 'value': '32'}, {'name': 'Status', 'value': 'RESET'}, {'name': 'Status@entry', 'value': 'RESET'}, {'name': 'Tickstart', 'value': '231'}, {'name': 'Tickstart@entry', 'value': '231'}, {'name': 'Timeout', 'value': '4294967295'}, {'name': 'Timeout@entry', 'value': '4294967295'}], 'file': 'Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c', 'line': '3189', 'arch': 'armv7'}, 'thread-id': '1', 'stopped-threads': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,633 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x800037a
+2026-04-07 21:00:36,634 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x8000370
+2026-04-07 21:00:36,634 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x80003a4
+2026-04-07 21:00:36,634 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x800038c
+2026-04-07 21:00:36,634 [INFO fuzzer.py:107 set_breakpoints()] Redistribute all 4 breakpoints
+2026-04-07 21:00:36,636 [INFO GDB.py:70 continue_run()] continue exec!
+2026-04-07 21:00:36,638 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:36,638 [INFO uart.py:44 send_input()] [data send]:b'VulrhXQRKg4cbNlyY\n'
+2026-04-07 21:00:36,638 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:36,639 [INFO uart.py:44 send_input()] [data send]:b'F\n'
+2026-04-07 21:00:36,639 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:36,639 [INFO uart.py:44 send_input()] [data send]:b'GGBe1Fi9JgDyIiRYiXI5XAn\n'
+2026-04-07 21:00:36,640 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:36,640 [INFO GDB.py:87 interrupt()] gdb interrupt!
+2026-04-07 21:00:36,640 [INFO uart.py:44 send_input()] [data send]:b'G5Yp5ujqbRGiXBm2cIpf\n'
+2026-04-07 21:00:36,738 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,739 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '69', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x0800037a', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '236', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x800037a'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,739 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,739 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '70', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x08000370', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '231', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x8000370'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,739 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,739 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '71', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x080003a4', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '250', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x80003a4'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,739 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,739 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '72', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x0800038c', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '242', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x800038c'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,739 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'running', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,739 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'running', 'payload': {'thread-id': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,739 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,739 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '\nProgram', 'stream': 'stdout'}
+2026-04-07 21:00:36,739 [INFO GDB.py:39 _handle_response()] [GDB]
+Program
+2026-04-07 21:00:36,739 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': ' received signal SIGINT, Interrupt.\n', 'stream': 'stdout'}
+2026-04-07 21:00:36,739 [INFO GDB.py:39 _handle_response()] [GDB] received signal SIGINT, Interrupt.
+
+2026-04-07 21:00:36,844 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': 'SysTick_Handler () at Core/Src/stm32f1xx_it.c:184\n', 'stream': 'stdout'}
+2026-04-07 21:00:36,845 [INFO GDB.py:39 _handle_response()] [GDB]SysTick_Handler () at Core/Src/stm32f1xx_it.c:184
+
+2026-04-07 21:00:36,845 [INFO GDB.py:28 _listener_loop()] {'type': 'log', 'message': None, 'payload': '⚠️ warning: 184\tCore/Src/stm32f1xx_it.c: No such file or directory\n', 'stream': 'stdout'}
+2026-04-07 21:00:36,845 [INFO GDB.py:39 _handle_response()] [GDB]⚠️ warning: 184	Core/Src/stm32f1xx_it.c: No such file or directory
+
+2026-04-07 21:00:36,845 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'stopped', 'payload': {'reason': 'signal-received', 'signal-name': 'SIGINT', 'signal-meaning': 'Interrupt', 'frame': {'addr': '0x08000430', 'func': 'SysTick_Handler', 'args': [], 'file': 'Core/Src/stm32f1xx_it.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/stm32f1xx_it.c', 'line': '184', 'arch': 'armv7'}, 'thread-id': '1', 'stopped-threads': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,845 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x8000392
+2026-04-07 21:00:36,846 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x8000386
+2026-04-07 21:00:36,846 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x8000370
+2026-04-07 21:00:36,846 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x8000398
+2026-04-07 21:00:36,846 [INFO fuzzer.py:107 set_breakpoints()] Redistribute all 4 breakpoints
+2026-04-07 21:00:36,846 [INFO GDB.py:70 continue_run()] continue exec!
+2026-04-07 21:00:36,850 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:36,851 [INFO uart.py:44 send_input()] [data send]:b'xzUGWiGRJap8OuNDHkRahV\n'
+2026-04-07 21:00:36,853 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:36,854 [INFO uart.py:44 send_input()] [data send]:b'GjT\n'
+2026-04-07 21:00:36,854 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:36,854 [INFO uart.py:44 send_input()] [data send]:b'zVQGNvxNp0RpcWl3Jmvhu3q7dVSGohSV\n'
+2026-04-07 21:00:36,855 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:36,856 [INFO GDB.py:87 interrupt()] gdb interrupt!
+2026-04-07 21:00:36,856 [INFO uart.py:31 wait_for_output()] receive:b'Input:\n'
+2026-04-07 21:00:36,856 [INFO uart.py:44 send_input()] [data send]:b'lIUnayvQKYDXwCu\n'
+2026-04-07 21:00:36,856 [INFO uart.py:44 send_input()] [data send]:b'nW\n'
+2026-04-07 21:00:36,950 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,950 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '73', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x08000392', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '244', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x8000392'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,950 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,950 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '74', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x08000386', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '240', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x8000386'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,950 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,950 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '75', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x08000370', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '231', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x8000370'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,950 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,951 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '76', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x08000398', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '246', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x8000398'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,951 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'running', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,951 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'running', 'payload': {'thread-id': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,951 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,951 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '\nProgram', 'stream': 'stdout'}
+2026-04-07 21:00:36,951 [INFO GDB.py:39 _handle_response()] [GDB]
+Program
+2026-04-07 21:00:36,951 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': ' received signal SIGINT, Interrupt.\n', 'stream': 'stdout'}
+2026-04-07 21:00:36,951 [INFO GDB.py:39 _handle_response()] [GDB] received signal SIGINT, Interrupt.
+
+2026-04-07 21:00:36,951 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': 'SysTick_Handler () at Core/Src/stm32f1xx_it.c:184\n', 'stream': 'stdout'}
+2026-04-07 21:00:36,951 [INFO GDB.py:39 _handle_response()] [GDB]SysTick_Handler () at Core/Src/stm32f1xx_it.c:184
+
+2026-04-07 21:00:36,951 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '184\tin Core/Src/stm32f1xx_it.c\n', 'stream': 'stdout'}
+2026-04-07 21:00:36,951 [INFO GDB.py:39 _handle_response()] [GDB]184	in Core/Src/stm32f1xx_it.c
+
+2026-04-07 21:00:36,951 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'stopped', 'payload': {'reason': 'signal-received', 'signal-name': 'SIGINT', 'signal-meaning': 'Interrupt', 'frame': {'addr': '0x08000430', 'func': 'SysTick_Handler', 'args': [], 'file': 'Core/Src/stm32f1xx_it.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/stm32f1xx_it.c', 'line': '184', 'arch': 'armv7'}, 'thread-id': '1', 'stopped-threads': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:36,951 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x8000380
+2026-04-07 21:00:36,951 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x800036c
+2026-04-07 21:00:36,952 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x80003b4
+2026-04-07 21:00:36,952 [INFO GDB.py:82 set_breakpoint()] set breakpoint at 0x8000370
+2026-04-07 21:00:36,953 [INFO fuzzer.py:107 set_breakpoints()] Redistribute all 4 breakpoints
+2026-04-07 21:00:36,953 [INFO GDB.py:70 continue_run()] continue exec!
+2026-04-07 21:00:37,056 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:37,056 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '77', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x08000380', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '238', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x8000380'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:37,056 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:37,057 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '78', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x0800036c', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '232', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x800036c'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:37,057 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:37,057 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '79', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x080003b4', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '250', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x80003b4'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:37,057 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:37,057 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'done', 'payload': {'bkpt': {'number': '80', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x08000370', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '231', 'thread-groups': ['i1'], 'times': '0', 'original-location': '*0x8000370'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:37,057 [INFO GDB.py:28 _listener_loop()] {'type': 'result', 'message': 'running', 'payload': None, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:37,057 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'running', 'payload': {'thread-id': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:37,057 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'breakpoint-modified', 'payload': {'bkpt': {'number': '80', 'type': 'breakpoint', 'disp': 'keep', 'enabled': 'y', 'addr': '0x08000370', 'func': 'deadbeef', 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '231', 'thread-groups': ['i1'], 'times': '1', 'original-location': '*0x8000370'}}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:37,057 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': '\n', 'stream': 'stdout'}
+2026-04-07 21:00:37,057 [INFO GDB.py:39 _handle_response()] [GDB]
+
+2026-04-07 21:00:37,057 [INFO GDB.py:28 _listener_loop()] {'type': 'console', 'message': None, 'payload': 'Breakpoint 80, 0x08000370 in deadbeef (buf=buf@entry=0x20000028 <buffer> "QUWGINn\\nfz5Rxj2D", size=8) at Core/Src/main.c:231\n', 'stream': 'stdout'}
+2026-04-07 21:00:37,057 [INFO GDB.py:39 _handle_response()] [GDB]Breakpoint 80, 0x08000370 in deadbeef (buf=buf@entry=0x20000028 <buffer> "QUWGINn\nfz5Rxj2D", size=8) at Core/Src/main.c:231
+
+2026-04-07 21:00:37,057 [INFO GDB.py:28 _listener_loop()] {'type': 'log', 'message': None, 'payload': '⚠️ warning: 231\tCore/Src/main.c: No such file or directory\n', 'stream': 'stdout'}
+2026-04-07 21:00:37,057 [INFO GDB.py:39 _handle_response()] [GDB]⚠️ warning: 231	Core/Src/main.c: No such file or directory
+
+2026-04-07 21:00:37,057 [INFO GDB.py:28 _listener_loop()] {'type': 'notify', 'message': 'stopped', 'payload': {'reason': 'breakpoint-hit', 'disp': 'keep', 'bkptno': '80', 'frame': {'addr': '0x08000370', 'func': 'deadbeef', 'args': [{'name': 'buf', 'value': '0x20000028 <buffer> "QUWGINn\\nfz5Rxj2D"'}, {'name': 'buf@entry', 'value': '0x20000028 <buffer> "QUWGINn\\nfz5Rxj2D"'}, {'name': 'size', 'value': '8'}], 'file': 'Core/Src/main.c', 'fullname': '/home/bhxyry/Desktop/Parallels Shared Folders/Home/Desktop/fuzz-deadbeef/Core/Src/main.c', 'line': '231', 'arch': 'armv7'}, 'thread-id': '1', 'stopped-threads': 'all'}, 'token': None, 'stream': 'stdout'}
+2026-04-07 21:00:37,057 [INFO fuzzer.py:78 start_fuzz()] Breakpoint hit at 0x08000370
+2026-04-07 21:00:37,058 [INFO GDB.py:70 continue_run()] continue exec!
+2026-04-07 21:00:37,058 [INFO fuzzer.py:87 start_fuzz()] time end
+2026-04-07 21:00:37,058 [INFO uart.py:51 disconnect()] serial disconnect!
+2026-04-07 21:00:37,058 [INFO qemu.py:42 stop()] qemu exit!
+2026-04-07 21:00:37,062 [INFO GDB.py:74 disconnect()] GDB Exit

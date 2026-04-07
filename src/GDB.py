@@ -25,7 +25,7 @@ class GDB:
                 continue
 
             for r in responses:
-                # log.info(f"{r}")
+                log.info(f"{r}")
                 self._handle_response(r)
 
     def _handle_response(self, r):
@@ -36,7 +36,7 @@ class GDB:
 
         elif rtype in ("console", "log", "output"):
             pass
-            # log.info(f"[GDB]{r.get("payload")}")
+            log.info(f"[GDB]{r.get("payload")}")
 
     def _handle_notify(self, r):
         message = r.get("message")
@@ -52,9 +52,10 @@ class GDB:
     def wait_for_stop(self):
         try:
             msg = self.stop_queue.get(timeout=5)
+            return msg
         except queue.Empty:
             log.error("stop queue is empty!")
-        return msg
+            return None
 
     def connect(self):
         self.gdb.write("-gdb-set mi-async on", read_response=False)
@@ -77,6 +78,7 @@ class GDB:
             pass
 
     def set_breakpoint(self, addr: str):
+        self.gdb.write("-break-delete", read_response=False)
         log.info(f"set breakpoint at {addr}")
         self.gdb.write(f"-break-insert *{addr}", read_response=False)
 

@@ -10,6 +10,7 @@ from qemu import QEMU
 from GDB import GDB
 from uart import UART
 import queue
+import string
 from binaryanalyzer import BinaryAnalyzer
 
 
@@ -26,6 +27,8 @@ class Fuzzer:
         self.max_breakpoints = int(config["SUT"]["max_breakpoints"])
         self.until_rotate_breakpoints = int(config["SUT"]["until_rotate_breakpoints"])
 
+        self.data = []
+
         self.before_fuzz(config)
 
         self.start_fuzz(config)
@@ -35,6 +38,8 @@ class Fuzzer:
     def before_fuzz(self, config: configparser):
         # before fuzzing
         self.binaryanalyzer.generate_cfg(config["output"]["output_directory"])
+
+        self.binaryanalyzer.build_dominator_tree()
 
     def start_fuzz(self, config: configparser):
         # start fuzzing
@@ -59,23 +64,37 @@ class Fuzzer:
 
                     if inputs_until_breakpoints_rotating == 0:
                         self.gdb.interrupt()
-                        self.set_breakpoints()
-                        self.gdb.continue_run()
 
                     inputs_until_breakpoints_rotating = (
                         inputs_until_breakpoints_rotating + 1
                     ) % self.max_breakpoints
 
-                    data = "deadbeef\n"
+                    data = self.gen_random_data()
+                    self.data.append(data)
+                    # data = b"deadbeef\n"
                     self.uart.send_input(data)
                 elif response["reason"] == "breakpoint-hit":
                     hit_addr = response["payload"]["frame"]["addr"]
                     log.info(f"Breakpoint hit at {hit_addr}")
+                    print(int(hit_addr, 16))
+                    self.binaryanalyzer.update_covered_info(int(hit_addr, 16))
                     self.gdb.continue_run()
+
+                elif response["reason"] == "signal-received":
+                    self.set_breakpoints()
+                    self.gdb.continue_run()
+
+            log.info("time end")
+
+        except KeyboardInterrupt:
+            pass
         finally:
+            self.uart.disconnect()
             self.qemu.stop()
             self.gdb.disconnect()
-            self.uart.disconnect()
+            self.binaryanalyzer.display_cover_info(config["output"]["output_directory"])
+            for data in self.data:
+                print(data)
 
     def set_breakpoints(self):
         if self.max_breakpoints <= 0:
@@ -86,3 +105,10 @@ class Fuzzer:
             self.gdb.set_breakpoint(f"0x{addr:x}")
 
         log.info(f"Redistribute all {self.max_breakpoints} breakpoints")
+
+    def gen_random_data(self, max_len=32):
+        length = random.randint(1, max_len)
+        chars = string.ascii_letters + string.digits
+        data = "".join(random.choice(chars) for _ in range(length))
+        data = data + "\n"
+        return data
