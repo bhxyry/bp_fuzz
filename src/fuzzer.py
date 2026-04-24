@@ -7,6 +7,7 @@ from uart import UART
 import queue
 from binaryanalyzer import BinaryAnalyzer
 from InputGeneration import InputGeneration
+from pc_sampling import PCSampling
 import os
 import matplotlib.pyplot as plt
 
@@ -19,7 +20,32 @@ class Fuzzer:
         )
         self.stop_queue = queue.Queue()
 
-        self.qemu = QEMU(config["SUT"]["file_path"], config["SUT"]["machine"])
+        pc_enabled = config.has_section("PC_sampling") and config["PC_sampling"].getboolean("enabled", fallback=False)
+        if pc_enabled:
+            pc_config = config["PC_sampling"]
+            sample_interval = pc_config.getint("sample_interval", fallback=10000)
+            sample_file = os.path.join(
+                config["output"]["output_directory"],
+                pc_config.get("output_file", fallback="pc_samples.bin"),
+            )
+            plugin_path = pc_config.get(
+                "plugin_path",
+                fallback="dependencies/pc_sampling/pc_sampling.so",
+            )
+            self.qemu = QEMU(
+                config["SUT"]["file_path"],
+                config["SUT"]["machine"],
+                plugin_path=plugin_path,
+                plugin_args={
+                    "sample_interval": str(sample_interval),
+                    "out_file": sample_file,
+                },
+            )
+            self.pc_sampling = PCSampling(sample_file, self.binaryanalyzer)
+        else:
+            self.qemu = QEMU(config["SUT"]["file_path"], config["SUT"]["machine"])
+            self.pc_sampling = None
+
         self.gdb = GDB(self.stop_queue)
         self.uart = UART(self.stop_queue)
 
@@ -55,6 +81,8 @@ class Fuzzer:
     def start_fuzz(self, config: configparser):
         # start fuzzing
         self.qemu.start()
+        if self.pc_sampling:
+            self.pc_sampling.start()
 
         self.gdb.connect(config["SUT"]["file_path"])
 
@@ -126,6 +154,13 @@ class Fuzzer:
             self.uart.disconnect()
             self.qemu.stop()
             self.gdb.disconnect()
+
+            if self.pc_sampling:
+                self.pc_sampling.stop()
+                log.info(
+                    f"PC sampling: {self.pc_sampling.sample_count} samples, "
+                    f"{self.pc_sampling.covered_via_sampling} new BBs discovered"
+                )
 
             self.binaryanalyzer.display_cover_info(output_path)
             self.plot_coverage_curve_input(output_path)

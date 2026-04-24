@@ -1,5 +1,12 @@
 .PHONY: install
-install:install_libFuzzerMutator
+install:install_libFuzzerMutator pc_sampling
+
+pc_sampling:
+	cd pc_sampling && $(MAKE) -j1
+
+install_qemu:
+	echo ***** Clone qemu
+	git clone --depth 1 -j8  https://github.com/qemu/qemu.git
 
 install_libFuzzerMutator:
 	echo '***** Download libFuzzer Mutator (AFL++ git repo stores libFuzzer Mutator code)'
@@ -11,4 +18,5 @@ install_libFuzzerMutator:
 	cd libFuzzerSrc && make -j4
 
 clean:
-	rm -rf libFuzzerSrc 
+	rm -rf libFuzzerSrc
+	cd pc_sampling && $(MAKE) clean

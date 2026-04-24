@@ -1,3 +1,4 @@
+import bisect
 import logging as log
 import random
 import networkx as nx
@@ -92,6 +93,18 @@ class BinaryAnalyzer:
         # ancestors = nx.ancestors(self.dom_tree, node)
         # self.covered_basic_block.update(ancestors)
         self.covered_basic_block.add(node)
+
+    def pc_to_bb(self, pc: int) -> int | None:
+        if not hasattr(self, "_sorted_bb_addrs"):
+            self._sorted_bb_addrs = sorted(self.basic_block_addr)
+
+        idx = bisect.bisect_right(self._sorted_bb_addrs, pc) - 1
+        if idx < 0:
+            return None
+        bb_addr = self._sorted_bb_addrs[idx]
+        if pc - bb_addr <= 4096:
+            return bb_addr
+        return None
 
     def display_cover_info(self, output_directory):
         with open(f"{output_directory}/basic_blocks.txt", "a") as f:
