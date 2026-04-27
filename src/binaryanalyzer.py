@@ -23,6 +23,9 @@ class BinaryAnalyzer:
 
         self.dom_tree = None
 
+        self.bb_range: dict[int, int] = {}
+        self._build_bb_range()
+
     # def generate_cfg(self, output_directory):
     #     symbol = self.project.loader.find_symbol(self.entry_function)
 
@@ -94,6 +97,13 @@ class BinaryAnalyzer:
         # self.covered_basic_block.update(ancestors)
         self.covered_basic_block.add(node)
 
+    def _build_bb_range(self):
+        sorted_addrs = sorted(self.basic_block_addr)
+        for i in range(len(sorted_addrs) - 1):
+            start = sorted_addrs[i]
+            end = sorted_addrs[i + 1]
+            self.bb_range[start] = end
+
     def pc_to_bb(self, pc: int) -> int | None:
         if not hasattr(self, "_sorted_bb_addrs"):
             self._sorted_bb_addrs = sorted(self.basic_block_addr)
@@ -102,7 +112,10 @@ class BinaryAnalyzer:
         if idx < 0:
             return None
         bb_addr = self._sorted_bb_addrs[idx]
-        if pc - bb_addr <= 4096:
+        end = self.bb_range.get(bb_addr)
+        if end is None:
+            return None
+        if pc < end:
             return bb_addr
         return None
 
