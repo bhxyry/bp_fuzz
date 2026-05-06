@@ -6,9 +6,7 @@ import time
 
 
 class PCSampling:
-    def __init__(
-        self, sample_file: str, binary_analyzer, poll_interval: float = 0.5
-    ):
+    def __init__(self, sample_file: str, binary_analyzer, poll_interval: float = 0.5):
         self.sample_file = sample_file
         self.binary_analyzer = binary_analyzer
         self.poll_interval = poll_interval
@@ -17,6 +15,7 @@ class PCSampling:
         self._read_offset = 0
         self.sample_count = 0
         self.covered_via_sampling = 0
+        self._coverage_snapshot = 0
 
     def start(self):
         self._running = True
@@ -27,6 +26,9 @@ class PCSampling:
         self._running = False
         if self._thread:
             self._thread.join(timeout=5)
+
+        if os.path.exists(self.sample_file):
+            os.remove(self.sample_file)
 
     def _reader_loop(self):
         while self._running and not os.path.exists(self.sample_file):
@@ -53,10 +55,20 @@ class PCSampling:
         for i in range(0, complete_len, chunk_size):
             pc = struct.unpack("<Q", data[i : i + chunk_size])[0]
             self.sample_count += 1
+            # log.info(f"pc sample {hex(pc)}")
             bb = self.binary_analyzer.pc_to_bb(pc)
             if bb is not None:
                 if bb not in self.binary_analyzer.covered_basic_block:
-                    self.covered_via_sampling += 1
+                    log.info(f"pc sample {hex(pc)} hit {hex(bb)}")
                     self.binary_analyzer.covered_basic_block.add(bb)
+                    self.covered_via_sampling = bb
 
         self._read_offset += complete_len
+
+    def has_new_coverage(self):
+        if self.covered_via_sampling != 0:
+            addr = self.covered_via_sampling
+            self.covered_via_sampling = 0
+            return addr
+
+        return 0

@@ -10,6 +10,7 @@ from InputGeneration import InputGeneration
 from pc_sampling import PCSampling
 import os
 import matplotlib.pyplot as plt
+import json
 
 
 class Fuzzer:
@@ -19,8 +20,11 @@ class Fuzzer:
             config["output"]["output_directory"], config["SUT"]["cfg_file_path"]
         )
         self.stop_queue = queue.Queue()
+        self.current_bp_num = 0
 
-        pc_enabled = config.has_section("PC_sampling") and config["PC_sampling"].getboolean("enabled", fallback=False)
+        pc_enabled = config.has_section("PC_sampling") and config[
+            "PC_sampling"
+        ].getboolean("enabled", fallback=False)
         if pc_enabled:
             pc_config = config["PC_sampling"]
             sample_interval = pc_config.getint("sample_interval", fallback=10000)
@@ -96,6 +100,8 @@ class Fuzzer:
         stop_time = config["Fuzzer"].getint("total_time") + int(time.time())
         inputs_until_breakpoints_rotating = 0
         start_time = int(time.time())
+        last_input_data = None
+
         try:
             while int(time.time()) < stop_time:
                 # log.info(self.stop_queue.qsize())
@@ -103,16 +109,31 @@ class Fuzzer:
                 # log.info(response)
                 if response["reason"] == "input request":
 
+                    # 检查上一轮输入是否通过 PC 采样发现新覆盖
+                    if self.pc_sampling and last_input_data is not None:
+                        addr = self.pc_sampling.has_new_coverage()
+                        if addr:
+                            timestamp = int(time.time()) - start_time
+                            self.input_generate.report_address_reach(
+                                last_input_data, addr, timestamp
+                            )
+                            # log.info(
+                            #     f"PC sampling: new coverage found, saved to corpus "
+                            #     f"{last_input_data}"
+                            # )
+
                     if inputs_until_breakpoints_rotating == 0:
 
                         self.input_generate.choose_new_baseline_input()
                         self.set_breakpoints()
+                        self.current_bp_num = self.max_breakpoints
 
                     inputs_until_breakpoints_rotating = (
                         inputs_until_breakpoints_rotating + 1
                     ) % self.until_rotate_breakpoints
 
                     data = self.input_generate.generate_input()
+                    last_input_data = data
 
                     # self.data.append(data)
                     # data = b"hhfisdacasdasadscdsadcasdcsdadcasScdsasdcdsacacacasc\n"
@@ -129,6 +150,9 @@ class Fuzzer:
                     addr = int(hit_addr, 16)
 
                     self.gdb.remove_breakpoint_id(addr)
+                    self.current_bp_num -= 1
+                    if self.current_bp_num == 0:
+                        inputs_until_breakpoints_rotating = 0
 
                     self.input_generate.report_address_reach(
                         data,
@@ -136,6 +160,7 @@ class Fuzzer:
                         int(time.time()) - start_time,
                     )
                     log.info(f"Breakpoint hit at {hit_addr}")
+                    # log.info(f"saved to corpus {data}")
                     self.binaryanalyzer.update_covered_info(addr)
 
                     current_time = int(time.time()) - start_time
@@ -157,14 +182,16 @@ class Fuzzer:
 
             if self.pc_sampling:
                 self.pc_sampling.stop()
-                log.info(
-                    f"PC sampling: {self.pc_sampling.sample_count} samples, "
-                    f"{self.pc_sampling.covered_via_sampling} new BBs discovered"
-                )
+                # log.info(
+                #     f"PC sampling: {self.pc_sampling.sample_count} samples, "
+                #     f"{len(self.pc_sampling.covered_via_sampling)} new BBs discovered"
+                # )
 
             self.binaryanalyzer.display_cover_info(output_path)
             self.plot_coverage_curve_input(output_path)
             self.plot_coverage_curve_time(output_path)
+
+            self.save_coverage_data(output_path)
 
     def set_breakpoints(self):
         # log.info(self.gdb.stop_queue.qsize())
@@ -228,3 +255,11 @@ class Fuzzer:
             dpi=300,
         )
         plt.close()
+
+    def save_coverage_data(self, path):
+        data = {
+            "blocks_cover": self.blocks_cover,
+            "coverage_curve": [(t, b) for t, b in self.coverage_curve],
+        }
+        with open(os.path.join(path, "coverage_data.json"), "w") as f:
+            json.dump(data, f, indent=2)

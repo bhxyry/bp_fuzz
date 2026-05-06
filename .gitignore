@@ -1,0 +1,34 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.venv/
+venv/
+
+# --- Build ---
+build/
+dist/
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+
+# --- IDE ---
+.vscode/
+.idea/
+
+# --- Output (fuzzing results, coverage data, graphs) ---
+output/
+
+# --- Dependencies build artifacts ---
+dependencies/pc_sampling/pc_sampling.so
+dependencies/qemu/
+dependencies/AFLplusplus/
+
+# --- Notebook checkpoints ---
+.ipynb_checkpoints/
+
+# --- Coverage graphs in src (generated at runtime) ---
+src/*.png
+src/*.ipynb

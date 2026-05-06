@@ -143,7 +143,7 @@ class InputGeneration:
 
     def report_address_reach(self, current_input: bytes, address: int, timestamp: int):
         self.total_hit_blocks += 1
-
+        # log.info(f"saved to corpus {current_input}")
         for i in self.corpus:
             if i.content == current_input:
                 i.hit_blocks += 1
