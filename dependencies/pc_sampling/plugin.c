@@ -13,16 +13,15 @@ static uint64_t sample_interval = 10000;
 static uint64_t random_offset = 0;
 static uint64_t tb_count = 0;
 
-static void vcpu_tb_exec(unsigned int vcpu_index, void *userdata)
+static void vcpu_insn_exec(unsigned int vcpu_index, void *userdata)
 {
-    uint64_t vaddr = (uint64_t)(uintptr_t)userdata;
+    uint64_t insn_vaddr = (uint64_t)(uintptr_t)userdata;
 
-    // 原子操作函数（built-in atomic operations）
+    // 每执行一条指令，原子递增计数器
     uint64_t count = __atomic_add_fetch(&tb_count, 1, __ATOMIC_RELAXED);
 
     if ((count + random_offset) % sample_interval == 0) {
-        // 直接写文件，不经过内存缓冲
-        fwrite(&vaddr, sizeof(uint64_t), 1, out_fp);
+        fwrite(&insn_vaddr, sizeof(uint64_t), 1, out_fp);
         fflush(out_fp);
     }
 }
@@ -30,11 +29,14 @@ static void vcpu_tb_exec(unsigned int vcpu_index, void *userdata)
 //每当 QEMU 翻译一个新基本块时被调用
 static void vcpu_tb_trans(qemu_plugin_id_t id, struct qemu_plugin_tb *tb)
 {
-    uint64_t vaddr = qemu_plugin_tb_vaddr(tb);
-
-    qemu_plugin_register_vcpu_tb_exec_cb(
-        tb, vcpu_tb_exec, QEMU_PLUGIN_CB_NO_REGS,
-        (void *)(uintptr_t)vaddr);
+    size_t n = qemu_plugin_tb_n_insns(tb);
+    for (size_t i = 0; i < n; i++) {
+        struct qemu_plugin_insn *insn = qemu_plugin_tb_get_insn(tb, i);
+        uint64_t vaddr = qemu_plugin_insn_vaddr(insn);
+        qemu_plugin_register_vcpu_insn_exec_cb(
+            insn, vcpu_insn_exec, QEMU_PLUGIN_CB_NO_REGS,
+            (void *)(uintptr_t)vaddr);
+    }
 }
 
 static void plugin_exit(qemu_plugin_id_t id, void *userdata)

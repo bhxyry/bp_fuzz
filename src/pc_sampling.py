@@ -27,8 +27,8 @@ class PCSampling:
         if self._thread:
             self._thread.join(timeout=5)
 
-        if os.path.exists(self.sample_file):
-            os.remove(self.sample_file)
+        # if os.path.exists(self.sample_file):
+        #     os.remove(self.sample_file)
 
     def _reader_loop(self):
         while self._running and not os.path.exists(self.sample_file):
