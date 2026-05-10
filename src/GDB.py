@@ -43,8 +43,8 @@ class GDB:
             try:
                 r = self._result_queue.get(timeout=0.05)
                 if r.get("token") == token:
+                    # log.info(f"{r}")
                     if r.get("message") == "error":
-                        # log.info(f"{r}")
                         raise RuntimeError(f"GDB error: {r['payload']['msg']}")
                     return r
                 else:

@@ -28,24 +28,23 @@ class Fuzzer:
         if pc_enabled:
             pc_config = config["PC_sampling"]
             sample_interval = pc_config.getint("sample_interval", fallback=10000)
-            sample_file = os.path.join(
-                config["output"]["output_directory"],
-                pc_config.get("output_file", fallback="pc_samples.bin"),
-            )
             plugin_path = pc_config.get(
                 "plugin_path",
                 fallback="dependencies/pc_sampling/pc_sampling.so",
             )
+
+            self._pc_read_fd, self._pc_write_fd = os.pipe()
+
             self.qemu = QEMU(
                 config["SUT"]["file_path"],
                 config["SUT"]["machine"],
                 plugin_path=plugin_path,
                 plugin_args={
                     "sample_interval": str(sample_interval),
-                    "out_file": sample_file,
                 },
+                pipe_write_fd=self._pc_write_fd,
             )
-            self.pc_sampling = PCSampling(sample_file, self.binaryanalyzer)
+            self.pc_sampling = PCSampling(self._pc_read_fd, self.binaryanalyzer)
         else:
             self.qemu = QEMU(config["SUT"]["file_path"], config["SUT"]["machine"])
             self.pc_sampling = None
@@ -87,6 +86,8 @@ class Fuzzer:
         self.qemu.start()
         if self.pc_sampling:
             self.pc_sampling.start()
+            os.close(self._pc_write_fd)
+            self._pc_write_fd = -1
 
         self.gdb.connect(config["SUT"]["file_path"])
 
@@ -109,9 +110,9 @@ class Fuzzer:
                 # log.info(response)
                 if response["reason"] == "input request":
 
-                    # 检查上一轮输入是否通过 PC 采样发现新覆盖
+                    # 检查 PC 管道中是否有新样本
                     if self.pc_sampling and last_input_data is not None:
-                        addr = self.pc_sampling.has_new_coverage()
+                        addr = self.pc_sampling.check_and_process()
                         if addr:
                             timestamp = int(time.time()) - start_time
                             self.input_generate.report_address_reach(
@@ -159,7 +160,7 @@ class Fuzzer:
                         addr,
                         int(time.time()) - start_time,
                     )
-                    log.info(f"Breakpoint hit at {hit_addr}")
+                    log.info(f"\033[32mBreakpoint hit at {hit_addr}\033[0m")
                     # log.info(f"saved to corpus {data}")
                     self.binaryanalyzer.update_covered_info(addr)
 

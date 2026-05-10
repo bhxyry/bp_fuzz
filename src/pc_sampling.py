@@ -1,74 +1,53 @@
 import logging as log
 import os
 import struct
-import threading
-import time
 
 
 class PCSampling:
-    def __init__(self, sample_file: str, binary_analyzer, poll_interval: float = 0.5):
-        self.sample_file = sample_file
+    def __init__(self, read_fd: int, binary_analyzer):
+        self._read_fd = read_fd
         self.binary_analyzer = binary_analyzer
-        self.poll_interval = poll_interval
-        self._running = False
-        self._thread = None
-        self._read_offset = 0
         self.sample_count = 0
-        self.covered_via_sampling = 0
-        self._coverage_snapshot = 0
+        self._new_coverage_addr = 0
 
     def start(self):
-        self._running = True
-        self._thread = threading.Thread(target=self._reader_loop, daemon=True)
-        self._thread.start()
+        os.set_blocking(self._read_fd, False)
 
     def stop(self):
-        self._running = False
-        if self._thread:
-            self._thread.join(timeout=5)
+        if self._read_fd >= 0:
+            os.close(self._read_fd)
+            self._read_fd = -1
 
-        # if os.path.exists(self.sample_file):
-        #     os.remove(self.sample_file)
+    def check_and_process(self):
+        """Read all available samples from pipe, update coverage.
+        Returns True if new coverage was discovered."""
+        self._new_coverage_addr = 0
 
-    def _reader_loop(self):
-        while self._running and not os.path.exists(self.sample_file):
-            time.sleep(0.1)
-
-        while self._running:
+        while True:
             try:
-                with open(self.sample_file, "rb") as f:
-                    f.seek(self._read_offset)
-                    data = f.read()
-                    if data:
-                        self._process_samples(data)
-            except FileNotFoundError:
-                pass
-            except Exception as e:
-                log.error(f"PC sampling read error: {e}")
+                data = os.read(self._read_fd, 65536)
+                if not data:
+                    break
+                self._process_samples(data)
+            except BlockingIOError:
+                break
+            except OSError:
+                break
 
-            time.sleep(self.poll_interval)
+        if self._new_coverage_addr != 0:
+            return self._new_coverage_addr
+        return 0
 
     def _process_samples(self, data: bytes):
-        chunk_size = 8  # uint64_t
+        chunk_size = 8
         complete_len = (len(data) // chunk_size) * chunk_size
 
         for i in range(0, complete_len, chunk_size):
             pc = struct.unpack("<Q", data[i : i + chunk_size])[0]
             self.sample_count += 1
-            # log.info(f"pc sample {hex(pc)}")
             bb = self.binary_analyzer.pc_to_bb(pc)
             if bb is not None:
                 if bb not in self.binary_analyzer.covered_basic_block:
-                    log.info(f"pc sample {hex(pc)} hit {hex(bb)}")
+                    log.info(f"\033[36mpc sample {hex(pc)} hit {hex(bb)}\033[0m")
                     self.binary_analyzer.covered_basic_block.add(bb)
-                    self.covered_via_sampling = bb
-
-        self._read_offset += complete_len
-
-    def has_new_coverage(self):
-        if self.covered_via_sampling != 0:
-            addr = self.covered_via_sampling
-            self.covered_via_sampling = 0
-            return addr
-
-        return 0
+                    self._new_coverage_addr = bb
